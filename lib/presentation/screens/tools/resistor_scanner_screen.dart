@@ -354,9 +354,7 @@ class _PhotoCard extends StatelessWidget {
                 child: Text(
                   UiText.t(
                     context,
-                    'Take or choose a resistor photo, then select bands manually.
-
-The photo is used only as a visual reference. Color bands must be selected manually.',
+                    'Take or choose a resistor photo, then select bands manually.\n\nThe photo is used only as a visual reference. Color bands must be selected manually.',
                   ),
                   textAlign: TextAlign.center,
                 ),
