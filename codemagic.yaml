@@ -70,7 +70,7 @@ workflows:
           storePassword=$CM_KEYSTORE_PASSWORD
           keyPassword=$CM_KEY_PASSWORD
           keyAlias=$CM_KEY_ALIAS
-          storeFile=app/key.jks
+          storeFile=key.jks
           EOF
           else
             echo "No keystore provided. Building unsigned/release artifacts."
