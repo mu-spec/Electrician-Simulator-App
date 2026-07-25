@@ -70,7 +70,7 @@ class SettingsScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          UiText.t(context, 'Version 2.0.0'),
+                          UiText.t(context, 'Version 1.0.0'),
                           style: const TextStyle(
                             fontSize: 14,
                             color: Colors.white70,

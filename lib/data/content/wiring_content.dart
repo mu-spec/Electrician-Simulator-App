@@ -45,15 +45,15 @@ class WiringContent {
         description:
             'Off-grid, hybrid, grid-tie, battery bank, and DC protection wiring concepts.',
         keywords: ['solar', 'PV', 'inverter', 'battery', 'DC protection']),
-    WiringCategory(
-        id: 'generator',
-        name: 'Generator & ATS',
-        iconName: 'power',
-        colorHex: '#EF4444',
-        diagramCount: 7,
-        description:
-            'Manual changeover, ATS, generator-to-DB connection, and generator earthing concepts.',
-        keywords: ['generator', 'ATS', 'changeover', 'backup', 'earthing']),
+    // WiringCategory(
+    //     id: 'generator',
+    //     name: 'Generator & ATS',
+    //     iconName: 'power',
+    //     colorHex: '#EF4444',
+    //     diagramCount: 7,
+    //     description:
+    //         'Manual changeover, ATS, generator-to-DB connection, and generator earthing concepts.',
+    //     keywords: ['generator', 'ATS', 'changeover', 'backup', 'earthing']),
     WiringCategory(
         id: 'smart',
         name: 'Smart Home',
