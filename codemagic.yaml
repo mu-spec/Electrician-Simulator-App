@@ -72,8 +72,11 @@ workflows:
           keyAlias=$CM_KEY_ALIAS
           storeFile=key.jks
           EOF
+            echo "✅ SUCCESS: Keystore decoded and key.properties generated successfully!"
+            echo "The app will be signed with the production release certificate."
           else
-            echo "No keystore provided. Building unsigned/release artifacts."
+            echo "❌ WARNING: No keystore provided in Environment Variables."
+            echo "Building unsigned/debug artifacts."
           fi
 
       # Optimized localization architecture: 49 languages stored in assets/l10n/*.json.gz
