@@ -1,0 +1,51 @@
+﻿id,category,difficulty,title,asset,width,height,bytes,sha256,steps,components,content_version
+res_01,residential,beginner,Single Pole Light Switch,assets/diagrams/res_01.webp,1000,545,40404,9db38a2ef0a9d8682de52b018cfb946366d42162a991c2e5ee3f875d7596194c,6,5,2.1.0-production-wiring-audit
+res_02,residential,journeyman,Two-Way Staircase Switch,assets/diagrams/res_02.webp,1000,545,23694,290be21c635508dbb4712741cb4f5c59595cc1910d572227be1ee9559f501413,6,5,2.1.0-production-wiring-audit
+res_03,residential,journeyman,Intermediate Multi-Way Lighting,assets/diagrams/res_03.webp,1000,545,41224,94204b95e85b0a73abed57c7fbc386f9f13f619e65a5a16734c2f905d0809d29,6,5,2.1.0-production-wiring-audit
+res_04,residential,beginner,Single Socket Outlet,assets/diagrams/res_04.webp,1000,545,50930,5fa8f9d0a7f83995b17357949a2f9e6e0fccc921dd3c66a99db5e550c3bc78a0,6,5,2.1.0-production-wiring-audit
+res_05,residential,journeyman,Ring Main Socket Circuit,assets/diagrams/res_05.webp,1000,545,77062,0a2d196861e78122f797e05ef59a26addb9f84d2ca342812a429eda491118325,6,5,2.1.0-production-wiring-audit
+res_06,residential,journeyman,Ceiling Fan with Regulator,assets/diagrams/res_06.webp,1000,545,45622,7eed6205bfb3812f6a4631635285f82a87c8f1b2391af9f11b9469f3114b1451,6,5,2.1.0-production-wiring-audit
+res_07,residential,beginner,Doorbell Circuit,assets/diagrams/res_07.webp,1000,545,48328,c71150dcd32b6c8482c5c7db6e1ca6a511c2099e75d8cfd99a9096ac8a61cf31,6,5,2.1.0-production-wiring-audit
+dist_01,distribution,journeyman,Single Phase Distribution Board,assets/diagrams/dist_01.webp,1000,545,65706,41573efc288591edc0effbb5bc0ed46847a1bb609d8a1c5783ff27863b86dfc1,6,7,2.1.0-production-wiring-audit
+dist_02,distribution,master,Three Phase Distribution Board,assets/diagrams/dist_02.webp,1000,545,55530,37b6c32270b9646ad6970abf11498acf26fd1772567f06ee84b40e5777478e18,6,7,2.1.0-production-wiring-audit
+dist_03,distribution,journeyman,Sub-Distribution Board,assets/diagrams/dist_03.webp,1000,545,54328,ddfcedc8fc376b0ff01fa5fc72fc9e9d8d23220edce0720c6e4b72b365525d7b,6,6,2.1.0-production-wiring-audit
+dist_04,distribution,journeyman,RCD Protected DB,assets/diagrams/dist_04.webp,1000,545,57400,1b962fdc1d9ed00f39619f86ba06fdb6cbc9e2cbe256ccf2bf6f1782aec2c70e,6,6,2.1.0-production-wiring-audit
+dist_05,distribution,journeyman,SPD Protected Distribution Board,assets/diagrams/dist_05.webp,1000,545,67270,bc569b92af48a53914bbd0fa1521e3923ebdfb33f3727c4d61dcb55a072082c2,6,6,2.1.0-production-wiring-audit
+dist_06,distribution,journeyman,Three-Phase Load Balancing Example,assets/diagrams/dist_06.webp,1000,545,67672,cb80dea238e06993b591ea64cd6308f97eb1615b05849b124154fd66b82871dc,6,6,2.1.0-production-wiring-audit
+motor_01,motors,journeyman,DOL Motor Starter,assets/diagrams/motor_01.webp,1000,545,56704,143ba2e5fd4d61fb7e88c6dfebbe873957fc95ed54ba6ba5f073a3f484fbab3a,6,6,2.1.0-production-wiring-audit
+motor_02,motors,master,Star-Delta Starter,assets/diagrams/motor_02.webp,1000,545,51218,e14c8c46ecf37a1ba8be7c871d7f7e4f86cdd35b4c495456cf296a6795d8f2f5,6,7,2.1.0-production-wiring-audit
+motor_03,motors,master,Reverse Forward Motor Starter,assets/diagrams/motor_03.webp,1000,545,47178,3a02ef385f4df3ddda4548f34433b887d049770e1d92927ee5acaacc0ec314ad,6,6,2.1.0-production-wiring-audit
+motor_04,motors,journeyman,Motor with Overload Relay,assets/diagrams/motor_04.webp,1000,545,37274,eeba524461631a68c1154f598fbd5299a5b8895d22e502e77c6d755178b63bbe,6,6,2.1.0-production-wiring-audit
+motor_05,motors,journeyman,Timer-Based Motor Control,assets/diagrams/motor_05.webp,1000,545,35476,e6740bdc24fec56bd61d4d84eeb2e92dd6463563891745a0ce74f4630c00985a,6,6,2.1.0-production-wiring-audit
+solar_01,solar,master,Off-Grid Solar Wiring,assets/diagrams/solar_01.webp,1000,545,55878,f15fe8f0a1f130125e201057460e4abec121b5278f4de02d9fa507b642957d69,6,7,2.1.0-production-wiring-audit
+solar_02,solar,master,Hybrid Solar Wiring,assets/diagrams/solar_02.webp,1000,545,55294,9156bae740e75d5449a34d72ab342bb4f612b146006abfa559f0e7e690559482,6,7,2.1.0-production-wiring-audit
+solar_03,solar,master,Grid-Tie Solar Wiring,assets/diagrams/solar_03.webp,1000,545,39236,8b77cf55dd5da33d3ff427c7620635e64162a2ebc4fb6528b1a2ac8c3a304e99,6,7,2.1.0-production-wiring-audit
+solar_04,solar,journeyman,Solar Battery Bank Wiring,assets/diagrams/solar_04.webp,1000,545,68898,137f8c6aa026142d681c366e49af93d245bf14cbc5e76e1c4db0ac4d5d4d12a0,6,7,2.1.0-production-wiring-audit
+solar_05,solar,master,Solar DC Protection Wiring,assets/diagrams/solar_05.webp,1000,545,50338,b42664c0744539e4886ad1545937e3e583f431061270c2c385b617adfca1e6e5,6,7,2.1.0-production-wiring-audit
+generator_01,generator,master,Manual Changeover Switch,assets/diagrams/generator_01.webp,1000,545,54424,ff7a383184c3b5005f6487013efd2dba4b896aa61224a31d905273da87893088,6,6,2.1.0-production-wiring-audit
+generator_02,generator,master,Generator ATS Wiring,assets/diagrams/generator_02.webp,1000,545,74308,052a85acd2e874a5f4e3892af8d7d7a1337adf3c99a6e437410c1ca8e293e7c6,6,7,2.1.0-production-wiring-audit
+generator_03,generator,master,Generator Feeding Distribution Board,assets/diagrams/generator_03.webp,1000,545,60892,49122c320bc0715b584cfbbbe6140e939464df87ba8922851e82b31079090f22,6,6,2.1.0-production-wiring-audit
+generator_04,generator,master,Generator Earthing Diagram,assets/diagrams/generator_04.webp,1000,545,67678,28028244abbc03b2ac88bfdc770b25176cd5b33ece387f01af925e1f5ffdc3f6,6,6,2.1.0-production-wiring-audit
+smart_01,smart,journeyman,Smart Switch Without Neutral,assets/diagrams/smart_01.webp,1000,545,48530,f4eccd197586d1659d8b6731a305ab449238fe1f5b738930597de6190caf0a62,6,6,2.1.0-production-wiring-audit
+smart_02,smart,journeyman,Smart Switch With Neutral,assets/diagrams/smart_02.webp,1000,545,48844,0b973cd9d42959282bae3e9b9c09a96c71886cf215189787c94e785e9fb1d052,6,6,2.1.0-production-wiring-audit
+smart_03,smart,journeyman,Smart Relay Module,assets/diagrams/smart_03.webp,1000,545,44978,2fd01e4560afe4c542dd6c54a8178d24fece032f0dd1fc35922c6b597cad37a0,6,6,2.1.0-production-wiring-audit
+smart_04,smart,master,Smart Breaker Concept,assets/diagrams/smart_04.webp,1000,545,57116,07519eb01b24b5d5e626d16f2fc6955dff1f985416ba9036806e3a7f950f92ba,6,6,2.1.0-production-wiring-audit
+res_08,residential,journeyman,Dimmer Light Circuit,assets/diagrams/res_08.webp,1000,545,31252,0b87b4a30c85455b528473a5b397ac532ec47ee92b8cf298e8392b1359fc802a,6,4,2.1.0-production-wiring-audit
+res_09,residential,journeyman,Two Gang Switch Wiring,assets/diagrams/res_09.webp,1000,545,45706,aeb9665b141ea75c1fb4d5c5e4816fe4d373f8261b621d5fc4f9d9af6c5faedc,6,4,2.1.0-production-wiring-audit
+res_10,residential,journeyman,Light with Socket Combination,assets/diagrams/res_10.webp,1000,545,51182,aacfcc11942e6e22e96cd8becc3101c162eabbc3308269ab81bc043d32a0d812,6,5,2.1.0-production-wiring-audit
+res_11,residential,journeyman,Room Wiring Layout,assets/diagrams/res_11.webp,1000,545,60626,f8966e037574517ff1a1b9601cc2890796ee680efafc21d242a9eb1e5bfa63f3,6,5,2.1.0-production-wiring-audit
+dist_07,distribution,journeyman,Split Load DB,assets/diagrams/dist_07.webp,1000,545,64642,abd03fa45a8dc9fffc455385b20e8491483358ab7dfaef220d9d190cad3c48b8,6,4,2.1.0-production-wiring-audit
+dist_08,distribution,journeyman,RCBO Distribution Board,assets/diagrams/dist_08.webp,1000,545,64662,44919571a045fca1d15b5aba9bc5460acb340797a736fefe502c4fe4cca71071,6,4,2.1.0-production-wiring-audit
+dist_09,distribution,journeyman,DB Surge and RCD Combined Layout,assets/diagrams/dist_09.webp,1000,545,57498,961b4fc111a7276d66675384c507fb73f6c97482aa40e5287c6fb30dd8520a69,6,5,2.1.0-production-wiring-audit
+motor_06,motors,journeyman,Soft Starter Wiring,assets/diagrams/motor_06.webp,1000,545,51960,7452a5be4dbff31fb041fb6de382782924741dde690a9d03e519f92208392c52,6,5,2.1.0-production-wiring-audit
+motor_07,motors,journeyman,VFD Motor Wiring,assets/diagrams/motor_07.webp,1000,545,59802,532d5e011ff620ae5f3f215696ec37ce6cbeb34792b6a88adc2d9e8693b99ed3,6,5,2.1.0-production-wiring-audit
+motor_08,motors,journeyman,Pump Float Switch Control,assets/diagrams/motor_08.webp,1000,545,49034,40509603da88744b430be65a02be4c244be5a52ab65c9110db42a459185d2cca,6,5,2.1.0-production-wiring-audit
+solar_06,solar,journeyman,PV String Combiner Box,assets/diagrams/solar_06.webp,1000,545,59228,79b3616029cf721cff38f9910b5d30976fec3851478865bd2e802eaa8853392f,6,5,2.1.0-production-wiring-audit
+solar_07,solar,journeyman,Microinverter Solar Wiring,assets/diagrams/solar_07.webp,1000,545,41802,f92d2e8ec59465afb1be4b8747cade21f9edac1117822b7611a4757589178065,6,5,2.1.0-production-wiring-audit
+solar_08,solar,journeyman,Solar Inverter AC DB Connection,assets/diagrams/solar_08.webp,1000,545,50520,9c7ed9e6772ea5cea909a2d13f363443de6fbbb7b9ff03a10878b3904cad5593,6,5,2.1.0-production-wiring-audit
+generator_05,generator,journeyman,Portable Generator Changeover,assets/diagrams/generator_05.webp,1000,545,75526,a683b81383f6568c1c5360e4267dff71c001f2ed0f3ef065c98883930351bb76,6,5,2.1.0-production-wiring-audit
+generator_06,generator,journeyman,Three Phase Generator ATS,assets/diagrams/generator_06.webp,1000,545,68416,5c2eff3f708047e6943b815006e01476b56f2e775847bd8f8293bf1733694396,6,5,2.1.0-production-wiring-audit
+generator_07,generator,journeyman,Generator Battery Charger Circuit,assets/diagrams/generator_07.webp,1000,545,28272,ced356aa0d1cbecc4cc7dd32872958fff6a2660308aa433f185bb1155f330895,6,5,2.1.0-production-wiring-audit
+smart_05,smart,journeyman,Zigbee Smart Relay Lighting,assets/diagrams/smart_05.webp,1000,545,35570,fcad333b494eb9111cdea55c5c93f80bd4eed56c49c79852e4511c9559cc80e7,6,5,2.1.0-production-wiring-audit
+smart_06,smart,journeyman,Smart Contactor for Heavy Load,assets/diagrams/smart_06.webp,1000,545,50618,06856bc28c0faedbde38aece2e6611bd55c20b95b0e5cf5225768957eb524d79,6,5,2.1.0-production-wiring-audit
+smart_07,smart,journeyman,Energy Monitor CT Wiring,assets/diagrams/smart_07.webp,1000,545,55948,f503592e37ae8650c111def25c535cc33d60da458e4f5b14e83509af89efb1ec,6,5,2.1.0-production-wiring-audit

@@ -1,0 +1,106 @@
+workflows:
+  android-release:
+    name: Android Release Build (arm64-only ~44MB)
+    instance_type: mac_mini_m1
+    max_build_duration: 60
+
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+
+    cache:
+      cache_paths:
+        - $FLUTTER_ROOT/.pub-cache
+        - $HOME/.gradle/caches
+
+    scripts:
+      - name: Flutter version
+        script: |
+          flutter --version
+
+      - name: Clean project
+        script: |
+          flutter clean
+          rm -rf build/
+
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+
+      - name: Verify assets cleaned (size optimization)
+        script: |
+          echo "=== assets/images/ ==="
+          ls -lh assets/images/ || true
+          echo "Should contain app_icon.png and tutorial_*.png"
+          # Fail if large PNGs still present
+                    if [ -f assets/images/app_icon_new.png ]; then echo "ERROR: app_icon_new.png still exists"; exit 1; fi
+          if [ -f assets/images/splash_logo.png ]; then echo "ERROR: splash_logo.png still exists"; exit 1; fi
+          echo "=== assets/l10n/ check ==="
+          ls -1 assets/l10n/*.json.gz | wc -l || true
+          echo "Should show exactly 49 compressed translation asset files"
+
+      - name: Analyze project
+        script: |
+          flutter analyze --no-fatal-infos --no-fatal-warnings || true
+
+      - name: Verify 50-language localization coverage
+        script: |
+          python3 scripts/localization_audit.py
+
+      - name: Verify production quiz quality
+        script: |
+          python3 scripts/quiz_audit.py
+
+      - name: Verify production wiring content
+        script: |
+          python3 scripts/wiring_audit.py
+
+      - name: Run tests
+        script: |
+          flutter test
+
+      - name: Decode keystore if available
+        script: |
+          if [ -n "$CM_KEYSTORE" ]; then
+            echo "$CM_KEYSTORE" | base64 --decode > "$CM_BUILD_DIR/android/app/key.jks"
+            cat > "$CM_BUILD_DIR/android/key.properties" << EOF
+          storePassword=$CM_KEYSTORE_PASSWORD
+          keyPassword=$CM_KEY_PASSWORD
+          keyAlias=$CM_KEY_ALIAS
+          storeFile=app/key.jks
+          EOF
+          else
+            echo "No keystore provided. Building unsigned/release artifacts."
+          fi
+
+      # Optimized localization architecture: 49 languages stored in assets/l10n/*.json.gz
+      # Eliminates 46MB of static Dart string maps from libapp.so (saves ~15-20MB in APK)
+      # With R8 enabled (isMinifyEnabled=true) + arm64-only, target size is ~44-46MB
+      - name: Build release APK (arm64 only - target 44MB after R8 & localization optimization)
+        script: |
+          flutter build apk --release --split-per-abi --target-platform android-arm64 --obfuscate --split-debug-info=./symbols
+          echo "=== APK sizes (check arm64 only) ==="
+          ls -lh build/app/outputs/flutter-apk/*.apk
+          du -sh build/app/outputs/flutter-apk/
+
+      - name: Build release App Bundle (arm64 only - target 32MB after R8)
+        script: |
+          flutter build appbundle --release --target-platform android-arm64 --obfuscate --split-debug-info=./symbols
+          echo "=== AAB sizes ==="
+          ls -lh build/app/outputs/bundle/release/*.aab
+          echo "Upload AAB to Play Store - Play will serve ~18-22MB to users"
+          echo "Note: AAB file size 40MB != download size. Play Console shows user download size."
+
+    artifacts:
+      - build/app/outputs/flutter-apk/*arm64*.apk
+      - build/app/outputs/flutter-apk/*release*.apk
+      - build/app/outputs/bundle/release/*.aab
+
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true
