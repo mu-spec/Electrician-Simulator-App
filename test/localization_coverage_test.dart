@@ -30,7 +30,10 @@ void main() {
     expect(GeneratedTranslations.map.keys.toSet(), translatedCodes);
 
     final allKeys = DataTranslations.map.values.first.keys.toSet();
-    expect(allKeys, hasLength(5179));
+    // 5,179 original strings + 73 strings added in the full 50-language
+    // translation update (2026-07-26): home subtitles, YouTube tab, resistor
+    // scanner, settings/version cards, onboarding, projects, invoice, etc.
+    expect(allKeys, hasLength(5252));
 
     for (final code in translatedCodes) {
       expect(DataTranslations.map[code]!.keys.toSet(), allKeys, reason: code);
