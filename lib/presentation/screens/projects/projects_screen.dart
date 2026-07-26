@@ -97,9 +97,8 @@ class _ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final status = project['status'] as String? ?? UiText.t(context, 'Open');
-    final priority =
-        project['priority'] as String? ?? UiText.t(context, 'Normal');
+    final status = project['status'] as String? ?? 'Open';
+    final priority = project['priority'] as String? ?? 'Normal';
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
@@ -153,11 +152,19 @@ class _ProjectCard extends StatelessWidget {
                       spacing: 6,
                       runSpacing: 6,
                       children: [
-                        _Badge(status, AppTheme.accentGreen),
-                        _Badge(priority, AppTheme.accentOrange),
                         _Badge(
-                          project['job_type'] as String? ??
-                              UiText.t(context, 'General'),
+                          UiText.t(context, status),
+                          AppTheme.accentGreen,
+                        ),
+                        _Badge(
+                          UiText.t(context, priority),
+                          AppTheme.accentOrange,
+                        ),
+                        _Badge(
+                          UiText.t(
+                            context,
+                            project['job_type'] as String? ?? 'General',
+                          ),
                           AppTheme.accentPurple,
                         ),
                       ],

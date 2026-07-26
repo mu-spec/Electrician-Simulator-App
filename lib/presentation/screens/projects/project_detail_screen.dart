@@ -381,9 +381,16 @@ class _ProjectHeader extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              _Pill(project['status'] as String? ?? 'Open'),
-              _Pill(project['priority'] as String? ?? 'Normal'),
-              _Pill(project['job_type'] as String? ?? 'General Electrical'),
+              _Pill(UiText.t(context, project['status'] as String? ?? 'Open')),
+              _Pill(
+                UiText.t(context, project['priority'] as String? ?? 'Normal'),
+              ),
+              _Pill(
+                UiText.t(
+                  context,
+                  project['job_type'] as String? ?? 'General Electrical',
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 14),
@@ -822,7 +829,9 @@ class _MaterialPricePickerScreenState extends State<MaterialPricePickerScreen> {
     });
     if (mounted)
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(UiText.t(context, '${item.name} added'))),
+        SnackBar(
+          content: Text('${item.name} ${UiText.t(context, 'added')}'),
+        ),
       );
   }
 
@@ -870,7 +879,7 @@ class _MaterialPricePickerScreenState extends State<MaterialPricePickerScreen> {
                 child: ListTile(
                   title: Text(item.name),
                   subtitle: Text(
-                    UiText.t(context, '${item.category} • ${item.unit}'),
+                    '${UiText.t(context, item.category)} • ${UiText.t(context, item.unit)}',
                   ),
                   trailing: Text(
                     UiText.t(

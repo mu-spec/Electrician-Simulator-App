@@ -119,7 +119,7 @@ class _TheoryScreenState extends State<TheoryScreen> {
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                '${filteredArticles.length} ${UiText.t(context, 'articles')}',
+                '${UiText.digits(context, '${filteredArticles.length}')} ${UiText.t(context, 'articles')}',
                 style: TextStyle(
                   fontFamily: _font,
                   fontSize: 12.5,
@@ -252,7 +252,7 @@ class _TheoryScreenState extends State<TheoryScreen> {
                                     ],
                                     const SizedBox(height: 8),
                                     Text(
-                                      '${article.readTimeMinutes} ${UiText.t(context, 'min read')}',
+                                      '${UiText.digits(context, '${article.readTimeMinutes}')} ${UiText.t(context, 'min read')}',
                                       style: TextStyle(
                                         fontFamily: _font,
                                         fontSize: 12,

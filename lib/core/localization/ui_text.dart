@@ -13,6 +13,38 @@ class UiText {
         english;
   }
 
+  /// Native numeral systems for languages that use non-Latin digits.
+  static const Map<String, List<String>> _digitMaps = {
+    'ar': ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'],
+    'ur': ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],
+    'fa': ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'],
+    'hi': ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],
+    'mr': ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'],
+    'bn': ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'],
+    'ta': ['௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯'],
+    'te': ['౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯'],
+    'kn': ['೦', '೧', '೨', '೩', '೪', '೫', '೬', '೭', '೮', '೯'],
+    'gu': ['૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'],
+    'pa': ['੦', '੧', '੨', '੩', '੪', '੫', '੬', '੭', '੮', '੯'],
+    'my': ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉'],
+    'km': ['០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'],
+    'th': ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'],
+    'si': ['෦', '෧', '෨', '෩', '෪', '෫', '෬', '෭', '෮', '෯'],
+  };
+
+  /// Converts Latin digits in [text] to the current language's native digits.
+  /// Use for counts, scores, and other short numeric UI labels.
+  static String digits(BuildContext context, String text) {
+    final map = _digitMaps[AppLocalizations.of(context).code];
+    if (map == null) return text;
+    final buffer = StringBuffer();
+    for (final ch in text.split('')) {
+      final idx = '0123456789'.indexOf(ch);
+      buffer.write(idx >= 0 ? map[idx] : ch);
+    }
+    return buffer.toString();
+  }
+
   static String? _fromAppLocalizations(BuildContext context, String english) {
     final key = _englishToKey[english];
     if (key == null) return null;

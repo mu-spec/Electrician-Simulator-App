@@ -51,7 +51,7 @@ class QuizScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 6),
                         Text(
-                          '${AppRepository.quizQuestions.length} ${l10n.t('questions')} • ${AppRepository.quizCategories.length} ${UiText.t(context, 'categories')}',
+                          '${UiText.digits(context, '${AppRepository.quizQuestions.length}')} ${l10n.t('questions')} • ${UiText.digits(context, '${AppRepository.quizCategories.length}')} ${UiText.t(context, 'categories')}',
                           style: TextStyle(
                             fontSize: 14,
                             color: Colors.white.withOpacity(0.9),

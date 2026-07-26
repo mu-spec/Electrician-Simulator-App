@@ -371,7 +371,7 @@ class _TrackCard extends StatelessWidget {
             ),
             const SizedBox(height: 5),
             Text(
-              '${pct.toStringAsFixed(0)}% ${UiText.t(context, 'modules complete')} • '
+              '${UiText.digits(context, pct.toStringAsFixed(0))}% ${UiText.t(context, 'modules complete')} • '
               '${LocalizedContent.text(context, track.estimatedStudyTime)}',
               style: Theme.of(context).textTheme.bodySmall,
             ),
@@ -429,9 +429,9 @@ class _DetailHeader extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            '${pct.toStringAsFixed(0)}% ${UiText.t(context, 'complete')} • '
-            '${track.modules.length} ${UiText.t(context, 'modules')} • '
-            '${track.totalLessons} ${UiText.t(context, 'lessons')}',
+            '${UiText.digits(context, pct.toStringAsFixed(0))}% ${UiText.t(context, 'complete')} • '
+            '${UiText.digits(context, '${track.modules.length}')} ${UiText.t(context, 'modules')} • '
+            '${UiText.digits(context, '${track.totalLessons}')} ${UiText.t(context, 'lessons')}',
             style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w700,
@@ -439,7 +439,7 @@ class _DetailHeader extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            '${UiText.t(context, 'Attempts:')} ${progress.attempts} • ${UiText.t(context, 'Best score:')} ${progress.bestScore}%',
+            '${UiText.t(context, 'Attempts:')} ${UiText.digits(context, '${progress.attempts}')} • ${UiText.t(context, 'Best score:')} ${UiText.digits(context, '${progress.bestScore}')}%',
             style: TextStyle(color: Colors.white70),
           ),
         ],

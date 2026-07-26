@@ -147,7 +147,7 @@ class _QuizPlayScreenState extends State<QuizPlayScreen> {
                     children: [
                       Expanded(
                         child: Text(
-                          '${l10n.t('question')} ${_currentIndex + 1} ${l10n.t('of')} ${widget.questions.length}',
+                          '${l10n.t('question')} ${UiText.digits(context, '${_currentIndex + 1}')} ${l10n.t('of')} ${UiText.digits(context, '${widget.questions.length}')}',
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -462,7 +462,7 @@ class QuizResultScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    '$score / $total',
+                    UiText.digits(context, '$score / $total'),
                     style: TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -471,7 +471,7 @@ class QuizResultScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    '${percentage.toStringAsFixed(0)}%',
+                    '${UiText.digits(context, percentage.toStringAsFixed(0))}%',
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   const SizedBox(height: 8),
@@ -489,20 +489,23 @@ class QuizResultScreen extends StatelessWidget {
               children: [
                 _StatCard(
                   label: UiText.t(context, 'Time'),
-                  value: '${timeSeconds ~/ 60}m ${timeSeconds % 60}s',
+                  value: UiText.digits(
+                    context,
+                    '${timeSeconds ~/ 60}m ${timeSeconds % 60}s',
+                  ),
                   icon: Icons.timer,
                 ),
                 const SizedBox(width: 12),
                 _StatCard(
                   label: AppLocalizations.of(context).t('correct').replaceAll('!', ''),
-                  value: '$score',
+                  value: UiText.digits(context, '$score'),
                   icon: Icons.check_circle,
                   color: AppTheme.accentGreen,
                 ),
                 const SizedBox(width: 12),
                 _StatCard(
                   label: UiText.t(context, 'Wrong'),
-                  value: '${total - score}',
+                  value: UiText.digits(context, '${total - score}'),
                   icon: Icons.cancel,
                   color: AppTheme.accentRed,
                 ),
