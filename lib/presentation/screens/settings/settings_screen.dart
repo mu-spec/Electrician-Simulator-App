@@ -304,7 +304,7 @@ class SettingsScreen extends StatelessWidget {
   /// app itself, in addition to the URL supplied in the Play Console listing.
   /// Opens the hosted policy in the user's browser.
   static const String _privacyPolicyUrl =
-      'https://docs.google.com/document/d/e/2PACX-1vTCg4_MDg3tVuBcg14ukNvbOZmlVsxMFYaJYZ8l7SzA4eCVy7-B5ZEWgUasH1Z3qSv3wF-wpfo0wN07/pub';
+      'https://docs.google.com/document/d/e/2PACX-1vQHzRFrySn9bxTSNeYCLozobv5Tvn2Lb41eXbYa0QwuISKHeP4URBVSr2n2HFqRAkb3d0TTN2nkS2Js/pub';
 
   Future<void> _openPrivacyPolicy(BuildContext context) async {
     final l10n = AppLocalizations.of(context);
