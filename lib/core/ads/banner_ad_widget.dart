@@ -120,9 +120,21 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
       width: double.infinity,
       color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       alignment: Alignment.center,
+      // bottom: true is required for Android 16 (targetSdk 36).
+      //
+      // Android 16 enforces edge-to-edge and removes the
+      // windowOptOutEdgeToEdgeEnforcement escape hatch, so the app window now
+      // extends behind the system navigation bar. This widget is anchored at
+      // the bottom of every route by the global builder in main.dart, which
+      // makes it exactly the kind of fixed bottom element that ends up
+      // underneath the gesture/nav bar.
+      //
+      // This previously read `bottom: false`, which explicitly discarded the
+      // bottom inset. On Android 16 that would let the navigation bar overlap
+      // the banner. Keeping top: false is still correct: this widget never
+      // touches the status bar.
       child: SafeArea(
         top: false,
-        bottom: false,
         child: SizedBox(
           width: _bannerAd!.size.width.toDouble(),
           height: _bannerAd!.size.height.toDouble(),

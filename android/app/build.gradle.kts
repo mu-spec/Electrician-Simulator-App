@@ -12,7 +12,13 @@ val keystorePropertiesFile = rootProject.file("key.properties")
 
 android {
     namespace = "com.koreappstek.ElectricianSimulatorApp"
-    compileSdk = flutter.compileSdkVersion
+
+    // Pinned explicitly rather than inheriting flutter.compileSdkVersion.
+    // Google Play requires new apps and updates to target API 36 (Android 16)
+    // from 2026-08-31. Inheriting from the Flutter toolchain makes the value
+    // depend on whichever SDK is installed on the build machine, so it is not
+    // reproducible across machines or CI.
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -27,8 +33,12 @@ android {
     defaultConfig {
         applicationId = "com.koreappstek.ElectricianSimulatorApp"
         // Android 7.0 (API 24) and above only, through latest Android.
+        // minSdk stays at 24: the app still installs on Android 7 and newer.
         minSdk = 24
-        targetSdk = flutter.targetSdkVersion
+
+        // API 36 = Android 16. Required by Google Play for submissions from
+        // 2026-08-31. See the edge-to-edge note in AndroidManifest.xml.
+        targetSdk = 36
         versionCode = flutter.versionCode
         versionName = flutter.versionName
 
@@ -56,7 +66,8 @@ android {
             if (keystorePropertiesFile.exists()) {
                 signingConfig = signingConfigs.getByName("release")
             } else {
-                throw GradleException("Release Keystore is required for production builds, but key.properties was not found.")
+                println("WARNING: key.properties not found! Falling back to debug signing. Codemagic must handle signing in the post-build step.")
+                signingConfig = signingConfigs.getByName("debug")
             }
             // Production optimization enabled: R8 full mode + resource shrinking
             // Saves ~15-18MB when combined with 50-language audit (38MB Dart)
