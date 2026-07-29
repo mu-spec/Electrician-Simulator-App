@@ -304,6 +304,13 @@ class SettingsScreen extends StatelessWidget {
                 ),
                 const Divider(height: 1),
                 _SettingsTile(
+                  icon: Icons.privacy_tip_outlined,
+                  iconColor: AppTheme.primaryBlue,
+                  title: l10n.t('privacyPolicy'),
+                  onTap: () => _openPrivacyPolicy(context),
+                ),
+                const Divider(height: 1),
+                _SettingsTile(
                   icon: Icons.star_outline,
                   iconColor: AppTheme.accentOrange,
                   title: l10n.t('rateApp'),
@@ -351,6 +358,51 @@ class SettingsScreen extends StatelessWidget {
               backgroundColor: AppTheme.accentRed,
             ),
             child: Text(l10n.t('clear')),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Google Play's User Data policy requires a privacy policy link inside the
+  /// app itself, in addition to the URL supplied in the Play Console listing.
+  /// Opens the hosted policy in the user's browser.
+  static const String _privacyPolicyUrl =
+      'https://docs.google.com/document/d/e/2PACX-1vTCg4_MDg3tVuBcg14ukNvbOZmlVsxMFYaJYZ8l7SzA4eCVy7-B5ZEWgUasH1Z3qSv3wF-wpfo0wN07/pub';
+
+  Future<void> _openPrivacyPolicy(BuildContext context) async {
+    final l10n = AppLocalizations.of(context);
+    final uri = Uri.parse(_privacyPolicyUrl);
+    try {
+      final launched = await launchUrl(
+        uri,
+        mode: LaunchMode.externalApplication,
+      );
+      if (!launched && context.mounted) {
+        _showLinkError(context, l10n);
+      }
+    } catch (_) {
+      if (context.mounted) {
+        _showLinkError(context, l10n);
+      }
+    }
+  }
+
+  /// Fallback when no browser can handle the link: show the URL so the user
+  /// can still reach the policy manually.
+  void _showLinkError(BuildContext context, AppLocalizations l10n) {
+    showDialog(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Text(l10n.t('privacyPolicy')),
+        content: SelectableText(
+          _privacyPolicyUrl,
+          style: const TextStyle(fontSize: 13, height: 1.5),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext),
+            child: Text(l10n.t('close')),
           ),
         ],
       ),

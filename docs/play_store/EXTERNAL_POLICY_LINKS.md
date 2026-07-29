@@ -1,29 +1,39 @@
 # External Policy Links
 
-Use these URLs in Google Play Console and inside the app.
+Package: `com.koreappstek.ElectricianSimulatorApp`
+Last updated: 2026-07-29
 
-## Privacy Policy
+## Privacy Policy — live
 
 ```text
-https://dynamic-kashata-01ef6b.netlify.app
+https://docs.google.com/document/d/e/2PACX-1vTCg4_MDg3tVuBcg14ukNvbOZmlVsxMFYaJYZ8l7SzA4eCVy7-B5ZEWgUasH1Z3qSv3wF-wpfo0wN07/pub
 ```
+
+Verified reachable (HTTP 200) on 2026-07-29.
+
+This URL must be entered in **both** places, per Google Play's User Data policy:
+
+1. **Play Console** → Store listing → Privacy policy field
+2. **Inside the app** → Settings → About → Privacy Policy
+   (`lib/presentation/screens/settings/settings_screen.dart`, `_privacyPolicyUrl`)
+
+> If the URL ever changes, update it in **both** places. A dead privacy policy
+> URL is a common cause of Play Store rejection, and the in-app link is a hard
+> requirement, not a nicety.
 
 ## Terms of Service
 
+Not currently published and not linked in the app. Google Play does not require
+one. Add only if the product decides to.
+
+## Previous links (superseded)
+
+The earlier Netlify pages are no longer referenced by the app:
+
 ```text
-https://aesthetic-palmier-7cb498.netlify.app
+https://dynamic-kashata-01ef6b.netlify.app     (privacy, superseded)
+https://aesthetic-palmier-7cb498.netlify.app   (terms, unused)
 ```
 
-## App Wiring
-
-These links are wired in:
-
-```text
-lib/presentation/screens/settings/settings_screen.dart
-```
-
-Settings → Privacy Policy opens the Privacy Policy URL.
-
-Settings → Terms of Use opens the Terms of Service URL.
-
-If the external browser cannot open, the app shows the built-in fallback policy text.
+Source HTML for these remains in `docs/web/` if a self-hosted version is ever
+needed again.
