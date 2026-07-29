@@ -6,11 +6,11 @@ void main() {
     await tester.pumpWidget(
       const MaterialApp(
         home: Scaffold(
-          body: Text('VoltMaster Pro Test'),
+          body: Text('Electrician Simulator App Test'),
         ),
       ),
     );
 
-    expect(find.text('VoltMaster Pro Test'), findsOneWidget);
+    expect(find.text('Electrician Simulator App Test'), findsOneWidget);
   });
 }

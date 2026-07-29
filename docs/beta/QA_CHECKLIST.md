@@ -1,4 +1,4 @@
-# VoltMaster Pro — QA Checklist
+# Electrician Simulator App — QA Checklist
 
 ## Build QA
 

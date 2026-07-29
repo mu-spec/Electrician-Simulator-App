@@ -1,4 +1,4 @@
-# VoltMaster Pro — Release Build Guide
+# Electrician Simulator App — Release Build Guide
 
 ## Current Version
 
@@ -62,7 +62,7 @@ adb install -r build/app/outputs/flutter-apk/app-release.apk
 ## Release Notes Draft
 
 ```text
-VoltMaster Pro 2.0 Closed Beta
+Electrician Simulator App 2.0 Closed Beta
 - 59 theory articles
 - 24 calculators
 - 31 wiring diagrams

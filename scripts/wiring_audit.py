@@ -232,7 +232,7 @@ def main() -> int:
     diagrams = load_diagrams()
     errors = audit(diagrams)
     categories = Counter(item.category for item in diagrams)
-    print('VoltMaster production wiring audit')
+    print('Electrician Simulator App production wiring audit')
     print(f'  Diagrams: {len(diagrams)}')
     print(f'  Categories: {dict(categories)}')
     print(f'  Steps: {sum(len(item.steps) for item in diagrams)}')

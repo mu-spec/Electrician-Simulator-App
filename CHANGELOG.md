@@ -66,7 +66,7 @@
 ### Changed
 
 - Updated app version to `2.0.0+20`.
-- Updated Android app label to `VoltMaster Pro`.
+- Updated Android app label to `Electrician Simulator App`.
 - Updated Settings app card to show `Version 2.0.0 Closed Beta`.
 - Content manifest updated to `2.0.0-phase2i`.
 

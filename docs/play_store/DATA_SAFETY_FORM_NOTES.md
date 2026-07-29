@@ -1,4 +1,4 @@
-# Google Play Data Safety Notes — VoltMaster Pro
+# Google Play Data Safety Notes — Electrician Simulator App
 
 Last reviewed: 2026-07-29
 Package: `com.koreappstek.ElectricianSimulatorApp`

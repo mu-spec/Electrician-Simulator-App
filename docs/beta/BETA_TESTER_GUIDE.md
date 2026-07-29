@@ -1,6 +1,6 @@
-# VoltMaster Pro — Beta Tester Guide
+# Electrician Simulator App — Beta Tester Guide
 
-Thank you for testing VoltMaster Pro.
+Thank you for testing Electrician Simulator App.
 
 ## What to Test
 

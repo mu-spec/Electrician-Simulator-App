@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Production QA checks for the bundled VoltMaster quiz bank."""
+"""Production QA checks for the bundled Electrician Simulator App quiz bank."""
 
 from __future__ import annotations
 
@@ -241,7 +241,7 @@ def main() -> int:
     errors = audit(questions)
     categories = Counter(question.category for question in questions)
     answer_positions = Counter('ABCD'[question.correct_index] for question in questions)
-    print('VoltMaster production quiz audit')
+    print('Electrician Simulator App production quiz audit')
     print(f'  Questions: {len(questions)}')
     print(f'  Categories: {dict(sorted(categories.items()))}')
     print(f'  Correct-answer positions: {dict(answer_positions)}')

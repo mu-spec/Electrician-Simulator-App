@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "VoltMaster Pro — Beta Build Check"
+echo "Electrician Simulator App — Beta Build Check"
 echo "================================="
 
 flutter --version
