@@ -39,7 +39,7 @@
 -keep class dart.ffi.** { *; }
 
 # Keep model classes (Gson/Moshi not used but safe)
--keep class com.muspec.electriciansimulator.** { *; }
+-keep class com.koreappstek.ElectricianSimulatorApp.** { *; }
 
 # R8 full mode compatibility
 -dontwarn **

@@ -1,4 +1,4 @@
-package com.muspec.electriciansimulator
+package com.koreappstek.ElectricianSimulatorApp
 
 import io.flutter.embedding.android.FlutterActivity
 

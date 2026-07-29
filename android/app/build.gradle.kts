@@ -11,7 +11,7 @@ val keystoreProperties = Properties()
 val keystorePropertiesFile = rootProject.file("key.properties")
 
 android {
-    namespace = "com.muspec.electriciansimulator"
+    namespace = "com.koreappstek.ElectricianSimulatorApp"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -25,7 +25,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.muspec.electriciansimulator"
+        applicationId = "com.koreappstek.ElectricianSimulatorApp"
         // Android 7.0 (API 24) and above only, through latest Android.
         minSdk = 24
         targetSdk = flutter.targetSdkVersion
@@ -56,8 +56,7 @@ android {
             if (keystorePropertiesFile.exists()) {
                 signingConfig = signingConfigs.getByName("release")
             } else {
-                println("WARNING: key.properties not found! Falling back to debug signing. Codemagic must handle signing in the post-build step.")
-                signingConfig = signingConfigs.getByName("debug")
+                throw GradleException("Release Keystore is required for production builds, but key.properties was not found.")
             }
             // Production optimization enabled: R8 full mode + resource shrinking
             // Saves ~15-18MB when combined with 50-language audit (38MB Dart)
