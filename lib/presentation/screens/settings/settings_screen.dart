@@ -357,58 +357,11 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  Future<void> _openExternalPolicy(
-    BuildContext context,
-    String title,
-    String url,
-    String fallbackBody,
-  ) async {
-    final uri = Uri.parse(url);
-    try {
-      final launched = await launchUrl(
-        uri,
-        mode: LaunchMode.externalApplication,
-      );
-      if (!launched && context.mounted) {
-        _showPolicyDialog(context, title, fallbackBody);
-      }
-    } catch (_) {
-      if (context.mounted) {
-        _showPolicyDialog(context, title, fallbackBody);
-      }
-    }
-  }
-
-  void _showPolicyDialog(BuildContext context, String title, String body) {
-    final l10n = AppLocalizations.of(context);
-    showDialog(
-      context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: Text(title),
-        content: SizedBox(
-          width: double.maxFinite,
-          child: SingleChildScrollView(
-            child: Text(
-              UiText.t(context, body),
-              style: const TextStyle(fontSize: 13, height: 1.6),
-            ),
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(dialogContext),
-            child: Text(l10n.t('close')),
-          ),
-        ],
-      ),
-    );
-  }
-
   Future<void> _rateApp(BuildContext context) async {
     final l10n = AppLocalizations.of(context);
     // Play Store listing (will work once the app is published)
     final uri = Uri.parse(
-      'https://play.google.com/store/apps/details?id=com.koreappstek.electriciansimulatorapp',
+      'https://play.google.com/store/apps/details?id=com.koreappstek.ElectricianSimulatorApp',
     );
     try {
       final launched = await launchUrl(
