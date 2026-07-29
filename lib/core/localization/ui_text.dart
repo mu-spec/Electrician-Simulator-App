@@ -133,6 +133,10 @@ class UiText {
 
   static const Map<String, Map<String, String>> _phrases = {
   "ur": {
+    "Exit": "باہر نکلیں",
+    "Are you sure you want to exit?": "کیا آپ واقعی ایپ بند کرنا چاہتے ہیں؟",
+    "Yes": "ہاں",
+    "No": "نہیں",
     "Invoice Summary": "انوائس کا خلاصہ",
     "Related App Content": "متعلقہ ایپ کا مواد",
     "Materials & Labor": "مواد اور لیبر",
@@ -231,6 +235,10 @@ class UiText {
     "Welcome Back,": "دوبارہ خوش آمدید،"
   },
   "hi": {
+    "Exit": "बाहर निकलें",
+    "Are you sure you want to exit?": "क्या आप वाकई बाहर निकलना चाहते हैं?",
+    "Yes": "हाँ",
+    "No": "नहीं",
     "Phone": "फ़ोन",
     "Certification Tracks": "प्रमाणन ट्रैक",
     "Site Photos": "साइट तस्वीरें",
@@ -329,6 +337,10 @@ class UiText {
     "Welcome Back,": "वापसी पर स्वागत है,"
   },
   "ar": {
+    "Exit": "خروج",
+    "Are you sure you want to exit?": "هل أنت متأكد أنك تريد الخروج؟",
+    "Yes": "نعم",
+    "No": "لا",
     "Job Manager": "مدير الوظيفة",
     "Job Notes / Requirements": "ملاحظات الوظيفة / المتطلبات",
     "Video Tutorial Links": "روابط دروس الفيديو",
@@ -427,6 +439,10 @@ class UiText {
     "Daily Safety Tip": "نصيحة السلامة اليومية"
   },
   "es": {
+    "Exit": "Salir",
+    "Are you sure you want to exit?": "¿Seguro que quieres salir?",
+    "Yes": "Sí",
+    "No": "No",
     "Global Search": "Búsqueda global",
     "Priority": "Prioridad",
     "Status": "Estado",
@@ -525,6 +541,10 @@ class UiText {
     "Daily Safety Tip": "Consejo de seguridad diario"
   },
   "pt": {
+    "Exit": "Sair",
+    "Are you sure you want to exit?": "Tem certeza de que deseja sair?",
+    "Yes": "Sim",
+    "No": "Não",
     "Job Manager": "Gerente de trabalho",
     "Job Notes / Requirements": "Notas/requisitos de trabalho",
     "Site / Location": "Site/Localização",
@@ -623,6 +643,10 @@ class UiText {
     "Daily Safety Tip": "Dica diária de segurança"
   },
   "fr": {
+    "Exit": "Quitter",
+    "Are you sure you want to exit?": "Voulez-vous vraiment quitter ?",
+    "Yes": "Oui",
+    "No": "Non",
     "Search": "Recherche",
     "Certification Tracks": "Pistes de certification",
     "Global Search": "Recherche globale",
@@ -721,6 +745,10 @@ class UiText {
     "Welcome Back,": "Content de te revoir,"
   },
   "de": {
+    "Exit": "Beenden",
+    "Are you sure you want to exit?": "Möchten Sie die App wirklich beenden?",
+    "Yes": "Ja",
+    "No": "Nein",
     "Job Manager": "Jobmanager",
     "Resistor Scanner": "Widerstandsscanner",
     "Site / Location": "Standort/Standort",
@@ -819,6 +847,10 @@ class UiText {
     "Welcome Back,": "Willkommen zurück,"
   },
   "ru": {
+    "Exit": "Выход",
+    "Are you sure you want to exit?": "Вы уверены, что хотите выйти?",
+    "Yes": "Да",
+    "No": "Нет",
     "Global Search": "Глобальный поиск",
     "Certification Tracks": "Сертификационные курсы",
     "Resistor Scanner": "Сканер резисторов",
@@ -917,6 +949,10 @@ class UiText {
     "Daily Safety Tip": "Ежедневный совет по безопасности"
   },
   "zh": {
+    "Exit": "退出",
+    "Are you sure you want to exit?": "确定要退出吗？",
+    "Yes": "是",
+    "No": "否",
     "Resistor Scanner": "电阻扫描仪",
     "Search": "搜索",
     "Video Tutorial Links": "视频教程链接",
@@ -1015,6 +1051,10 @@ class UiText {
     "Welcome Back,": "欢迎回来，"
   },
   "tr": {
+    "Exit": "Çıkış",
+    "Are you sure you want to exit?": "Çıkmak istediğinizden emin misiniz?",
+    "Yes": "Evet",
+    "No": "Hayır",
     "Search": "Aramak",
     "New Job": "Yeni İş",
     "Job Manager": "İş Yöneticisi",
@@ -1113,6 +1153,10 @@ class UiText {
     "Daily Safety Tip": "Günlük Güvenlik İpucu"
   },
   "id": {
+    "Exit": "Keluar",
+    "Are you sure you want to exit?": "Yakin ingin keluar?",
+    "Yes": "Ya",
+    "No": "Tidak",
     "Job Manager": "Manajer Pekerjaan",
     "Materials & Labor": "Bahan & Tenaga Kerja",
     "Select 4 Color Bands": "Pilih 4 Pita Warna",
@@ -1211,6 +1255,10 @@ class UiText {
     "Daily Safety Tip": "Tip Keamanan Harian"
   },
   "bn": {
+    "Exit": "প্রস্থান",
+    "Are you sure you want to exit?": "আপনি কি নিশ্চিত যে বের হতে চান?",
+    "Yes": "হ্যাঁ",
+    "No": "না",
     "Video Tutorial Links": "ভিডিও টিউটোরিয়াল লিঙ্ক",
     "Phone": "ফোন",
     "Status": "স্ট্যাটাস",
@@ -1309,6 +1357,10 @@ class UiText {
     "Daily Safety Tip": "দৈনিক নিরাপত্তা টিপ"
   },
   "fa": {
+    "Exit": "خروج",
+    "Are you sure you want to exit?": "آیا مطمئن هستید که می‌خواهید خارج شوید؟",
+    "Yes": "بله",
+    "No": "خیر",
     "Global Search": "جستجوی جهانی",
     "Certification Tracks": "مسیرهای صدور گواهینامه",
     "Resistor Scanner": "اسکنر مقاومتی",
@@ -1407,6 +1459,10 @@ class UiText {
     "Welcome Back,": "خوش آمدید،"
   },
   "ms": {
+    "Exit": "Keluar",
+    "Are you sure you want to exit?": "Adakah anda pasti mahu keluar?",
+    "Yes": "Ya",
+    "No": "Tidak",
     "Reference Photo": "Foto Rujukan",
     "Resistor Color Code Tool": "Alat Kod Warna Perintang",
     "Phone": "telefon",
@@ -1505,6 +1561,10 @@ class UiText {
     "Welcome Back,": "Selamat Kembali,"
   },
   "it": {
+    "Exit": "Esci",
+    "Are you sure you want to exit?": "Vuoi davvero uscire?",
+    "Yes": "Sì",
+    "No": "No",
     "New Job": "Nuovo lavoro",
     "Start Track Exam (25 Questions)": "Inizia l'esame (25 domande)",
     "Client": "Cliente",
@@ -1603,6 +1663,10 @@ class UiText {
     "Daily Safety Tip": "Suggerimento quotidiano per la sicurezza"
   },
   "ja": {
+    "Exit": "終了",
+    "Are you sure you want to exit?": "終了してもよろしいですか？",
+    "Yes": "はい",
+    "No": "いいえ",
     "Client": "クライアント",
     "Video Tutorial Links": "ビデオチュートリアルのリンク",
     "Job Notes / Requirements": "仕事のメモ/要件",
@@ -1701,6 +1765,10 @@ class UiText {
     "Daily Safety Tip": "日常の安全に関するヒント"
   },
   "ko": {
+    "Exit": "종료",
+    "Are you sure you want to exit?": "종료하시겠습니까?",
+    "Yes": "예",
+    "No": "아니요",
     "Search": "찾다",
     "Job Manager": "작업 관리자",
     "Generate & Share PDF Invoice": "PDF 송장 생성 및 공유",
@@ -1799,6 +1867,10 @@ class UiText {
     "Welcome Back,": "돌아온 것을 환영합니다."
   },
   "vi": {
+    "Exit": "Thoát",
+    "Are you sure you want to exit?": "Bạn có chắc muốn thoát không?",
+    "Yes": "Có",
+    "No": "Không",
     "Video Tutorial Links": "Liên kết video hướng dẫn",
     "Search": "Tìm kiếm",
     "Resistor Scanner": "Máy quét điện trở",
@@ -1897,6 +1969,10 @@ class UiText {
     "Welcome Back,": "Chào mừng trở lại,"
   },
   "th": {
+    "Exit": "ออก",
+    "Are you sure you want to exit?": "คุณแน่ใจหรือไม่ว่าต้องการออก?",
+    "Yes": "ใช่",
+    "No": "ไม่",
     "Search": "ค้นหา",
     "Global Search": "ค้นหาทั่วโลก",
     "Edit Job": "แก้ไขงาน",
@@ -1995,6 +2071,10 @@ class UiText {
     "Welcome Back,": "ยินดีต้อนรับกลับ"
   },
   "pl": {
+    "Exit": "Wyjdź",
+    "Are you sure you want to exit?": "Czy na pewno chcesz wyjść?",
+    "Yes": "Tak",
+    "No": "Nie",
     "Job Manager": "Menedżer zadań",
     "Edit Job": "Edytuj zadanie",
     "New Job": "Nowa praca",
@@ -2093,6 +2173,10 @@ class UiText {
     "Welcome Back,": "Witamy z powrotem,"
   },
   "nl": {
+    "Exit": "Afsluiten",
+    "Are you sure you want to exit?": "Weet je zeker dat je wilt afsluiten?",
+    "Yes": "Ja",
+    "No": "Nee",
     "Checklist": "Controlelijst",
     "Site / Location": "Locatie / Locatie",
     "Video Tutorial Links": "Links naar video-tutorials",
@@ -2191,6 +2275,10 @@ class UiText {
     "Welcome Back,": "Welkom terug,"
   },
   "uk": {
+    "Exit": "Вихід",
+    "Are you sure you want to exit?": "Ви впевнені, що хочете вийти?",
+    "Yes": "Так",
+    "No": "Ні",
     "Certification Tracks": "Треки сертифікації",
     "Global Search": "Глобальний пошук",
     "Search": "Пошук",
@@ -2289,6 +2377,10 @@ class UiText {
     "Welcome Back,": "Ласкаво просимо назад,"
   },
   "ro": {
+    "Exit": "Ieșire",
+    "Are you sure you want to exit?": "Sigur doriți să ieșiți?",
+    "Yes": "Da",
+    "No": "Nu",
     "Standards & Codes": "Standarde și coduri",
     "New Job": "Job nou",
     "Job Type": "Tipul locului de muncă",
@@ -2387,6 +2479,10 @@ class UiText {
     "Daily Safety Tip": "Sfat zilnic de siguranță"
   },
   "sv": {
+    "Exit": "Avsluta",
+    "Are you sure you want to exit?": "Är du säker på att du vill avsluta?",
+    "Yes": "Ja",
+    "No": "Nej",
     "Job Notes / Requirements": "Arbetsanteckningar/krav",
     "Price List": "Prislista",
     "Site / Location": "Plats / Plats",
@@ -2485,6 +2581,10 @@ class UiText {
     "Welcome Back,": "Välkommen tillbaka,"
   },
   "hu": {
+    "Exit": "Kilépés",
+    "Are you sure you want to exit?": "Biztosan ki szeretne lépni?",
+    "Yes": "Igen",
+    "No": "Nem",
     "Certification Tracks": "Minősítési pályák",
     "Search": "Keresés",
     "Global Search": "Globális keresés",
@@ -2583,6 +2683,10 @@ class UiText {
     "Welcome Back,": "Isten hozott vissza,"
   },
   "cs": {
+    "Exit": "Ukončit",
+    "Are you sure you want to exit?": "Opravdu chcete ukončit aplikaci?",
+    "Yes": "Ano",
+    "No": "Ne",
     "Linked Calculations": "Propojené výpočty",
     "Safety / Job Checklist": "Kontrolní seznam bezpečnosti / práce",
     "Price List": "Ceník",
@@ -2681,6 +2785,10 @@ class UiText {
     "Welcome Back,": "Vítejte zpět,"
   },
   "el": {
+    "Exit": "Έξοδος",
+    "Are you sure you want to exit?": "Είστε βέβαιοι ότι θέλετε να βγείτε;",
+    "Yes": "Ναι",
+    "No": "Όχι",
     "Search": "Ερευνα",
     "Invoice Summary": "Περίληψη τιμολογίου",
     "Watch on YouTube": "Δείτε στο YouTube",
@@ -2779,6 +2887,10 @@ class UiText {
     "Welcome Back,": "Καλώς ήρθες πίσω,"
   },
   "bg": {
+    "Exit": "Изход",
+    "Are you sure you want to exit?": "Сигурни ли сте, че искате да излезете?",
+    "Yes": "Да",
+    "No": "Не",
     "Invoice PDF": "Фактура PDF",
     "Gallery": "Галерия",
     "Delete": "Изтриване",
@@ -2877,6 +2989,10 @@ class UiText {
     "Welcome Back,": "Добре дошъл обратно,"
   },
   "da": {
+    "Exit": "Afslut",
+    "Are you sure you want to exit?": "Er du sikker på, at du vil afslutte?",
+    "Yes": "Ja",
+    "No": "Nej",
     "Standards & Codes": "Standarder og koder",
     "Certification Tracks": "Certificeringsspor",
     "Resistor Scanner": "Modstandsscanner",
@@ -2975,6 +3091,10 @@ class UiText {
     "Welcome Back,": "Velkommen tilbage,"
   },
   "fi": {
+    "Exit": "Poistu",
+    "Are you sure you want to exit?": "Haluatko varmasti poistua?",
+    "Yes": "Kyllä",
+    "No": "Ei",
     "Save Job": "Tallenna työ",
     "Global Search": "Maailmanlaajuinen haku",
     "Search": "Haku",
@@ -3073,6 +3193,10 @@ class UiText {
     "Welcome Back,": "Tervetuloa takaisin,"
   },
   "no": {
+    "Exit": "Avslutt",
+    "Are you sure you want to exit?": "Er du sikker på at du vil avslutte?",
+    "Yes": "Ja",
+    "No": "Nei",
     "Search": "Søk",
     "Priority": "Prioritet",
     "Job Type": "Jobbtype",
@@ -3171,6 +3295,10 @@ class UiText {
     "Welcome Back,": "Velkommen tilbake,"
   },
   "sk": {
+    "Exit": "Ukončiť",
+    "Are you sure you want to exit?": "Naozaj chcete ukončiť aplikáciu?",
+    "Yes": "Áno",
+    "No": "Nie",
     "Global Search": "Globálne vyhľadávanie",
     "Search": "Hľadať",
     "Edit Job": "Upraviť úlohu",
@@ -3269,6 +3397,10 @@ class UiText {
     "Welcome Back,": "Vitajte späť,"
   },
   "hr": {
+    "Exit": "Izlaz",
+    "Are you sure you want to exit?": "Jeste li sigurni da želite izaći?",
+    "Yes": "Da",
+    "No": "Ne",
     "Global Search": "Globalna pretraga",
     "Search": "Pretraživanje",
     "Add Item": "Dodaj stavku",
@@ -3367,6 +3499,10 @@ class UiText {
     "Welcome Back,": "dobro došao nazad,"
   },
   "sr": {
+    "Exit": "Излаз",
+    "Are you sure you want to exit?": "Да ли сте сигурни да желите да изађете?",
+    "Yes": "Да",
+    "No": "Не",
     "Tutorial link": "Туториал линк",
     "Recommended Diagrams": "Препоручени дијаграми",
     "Recommended Calculators": "Препоручени калкулатори",
@@ -3465,6 +3601,10 @@ class UiText {
     "Welcome Back,": "Добродошли назад,"
   },
   "ta": {
+    "Exit": "வெளியேறு",
+    "Are you sure you want to exit?": "நிச்சயமாக வெளியேற விரும்புகிறீர்களா?",
+    "Yes": "ஆம்",
+    "No": "இல்லை",
     "Standards & Codes": "தரநிலைகள் & குறியீடுகள்",
     "Edit Job": "வேலையைத் திருத்து",
     "Global Search": "உலகளாவிய தேடல்",
@@ -3563,6 +3703,10 @@ class UiText {
     "Daily Safety Tip": "தினசரி பாதுகாப்பு உதவிக்குறிப்பு"
   },
   "te": {
+    "Exit": "నిష్క్రమించు",
+    "Are you sure you want to exit?": "మీరు ఖచ్చితంగా నిష్క్రమించాలనుకుంటున్నారా?",
+    "Yes": "అవును",
+    "No": "కాదు",
     "Labor": "శ్రమ",
     "Job Type": "ఉద్యోగ రకం",
     "Job / Project Name": "ఉద్యోగం / ప్రాజెక్ట్ పేరు",
@@ -3661,6 +3805,10 @@ class UiText {
     "Welcome Back,": "తిరిగి స్వాగతం,"
   },
   "kn": {
+    "Exit": "ನಿರ್ಗಮಿಸು",
+    "Are you sure you want to exit?": "ನೀವು ಖಚಿತವಾಗಿ ನಿರ್ಗಮಿಸಲು ಬಯಸುವಿರಾ?",
+    "Yes": "ಹೌದು",
+    "No": "ಇಲ್ಲ",
     "New Job": "ಹೊಸ ಕೆಲಸ",
     "Certification Tracks": "ಪ್ರಮಾಣೀಕರಣ ಟ್ರ್ಯಾಕ್‌ಗಳು",
     "Add Item": "ಐಟಂ ಸೇರಿಸಿ",
@@ -3759,6 +3907,10 @@ class UiText {
     "Daily Safety Tip": "ದೈನಂದಿನ ಸುರಕ್ಷತೆ ಸಲಹೆ"
   },
   "mr": {
+    "Exit": "बाहेर पडा",
+    "Are you sure you want to exit?": "तुम्हाला नक्की बाहेर पडायचे आहे का?",
+    "Yes": "होय",
+    "No": "नाही",
     "Job Manager": "नोकरी व्यवस्थापक",
     "Status": "स्थिती",
     "Search": "शोधा",
@@ -3857,6 +4009,10 @@ class UiText {
     "Welcome Back,": "परत स्वागत आहे,"
   },
   "gu": {
+    "Exit": "બહાર નીકળો",
+    "Are you sure you want to exit?": "શું તમે ખરેખર બહાર નીકળવા માંગો છો?",
+    "Yes": "હા",
+    "No": "ના",
     "Certification Tracks": "પ્રમાણપત્ર ટ્રેક્સ",
     "Search": "શોધો",
     "Standards & Codes": "ધોરણો અને કોડ્સ",
@@ -3955,6 +4111,10 @@ class UiText {
     "Welcome Back,": "ફરી સ્વાગત છે,"
   },
   "pa": {
+    "Exit": "ਬਾਹਰ ਜਾਓ",
+    "Are you sure you want to exit?": "ਕੀ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਬਾਹਰ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "Yes": "ਹਾਂ",
+    "No": "ਨਹੀਂ",
     "Global Search": "ਗਲੋਬਲ ਖੋਜ",
     "Certification Tracks": "ਸਰਟੀਫਿਕੇਸ਼ਨ ਟਰੈਕਸ",
     "Video Tutorial Links": "ਵੀਡੀਓ ਟਿਊਟੋਰਿਅਲ ਲਿੰਕ",
@@ -4053,6 +4213,10 @@ class UiText {
     "Daily Safety Tip": "ਰੋਜ਼ਾਨਾ ਸੁਰੱਖਿਆ ਸੁਝਾਅ"
   },
   "sw": {
+    "Exit": "Toka",
+    "Are you sure you want to exit?": "Una uhakika unataka kutoka?",
+    "Yes": "Ndiyo",
+    "No": "Hapana",
     "Search": "Tafuta",
     "Video Tutorial Links": "Viungo vya Mafunzo ya Video",
     "Invoice Generator": "Jenereta ya ankara",
@@ -4151,6 +4315,10 @@ class UiText {
     "Welcome Back,": "Karibu tena,"
   },
   "tl": {
+    "Exit": "Lumabas",
+    "Are you sure you want to exit?": "Sigurado ka bang gusto mong lumabas?",
+    "Yes": "Oo",
+    "No": "Hindi",
     "Status": "Katayuan",
     "Global Search": "Pandaigdigang Paghahanap",
     "Job Type": "Uri ng Trabaho",
@@ -4249,6 +4417,10 @@ class UiText {
     "Welcome Back,": "Maligayang Pagbabalik,"
   },
   "he": {
+    "Exit": "יציאה",
+    "Are you sure you want to exit?": "האם אתה בטוח שברצונך לצאת?",
+    "Yes": "כן",
+    "No": "לא",
     "Search": "לְחַפֵּשׂ",
     "Global Search": "חיפוש גלובלי",
     "Video Tutorial Links": "קישורים להדרכות וידאו",
@@ -4347,6 +4519,10 @@ class UiText {
     "Welcome Back,": "ברוך שובך,"
   },
   "az": {
+    "Exit": "Çıxış",
+    "Are you sure you want to exit?": "Çıxmaq istədiyinizə əminsiniz?",
+    "Yes": "Bəli",
+    "No": "Xeyr",
     "Search": "Axtar",
     "Job / Project Name": "İş / Layihə Adı",
     "Job Manager": "İş meneceri",
@@ -4445,6 +4621,10 @@ class UiText {
     "Welcome Back,": "Xoş gəldiniz,"
   },
   "uz": {
+    "Exit": "Chiqish",
+    "Are you sure you want to exit?": "Chiqmoqchi ekanligingizga ishonchingiz komilmi?",
+    "Yes": "Ha",
+    "No": "Yoʻq",
     "Edit Job": "Vazifani tahrirlash",
     "Site Photos": "Sayt rasmlari",
     "Job / Project Name": "Ish / loyiha nomi",
@@ -4543,6 +4723,10 @@ class UiText {
     "Daily Safety Tip": "Kundalik xavfsizlik bo'yicha maslahat"
   },
   "my": {
+    "Exit": "ထွက်ရန်",
+    "Are you sure you want to exit?": "ထွက်လိုသည်မှာ သေချာပါသလား?",
+    "Yes": "ဟုတ်",
+    "No": "မဟုတ်",
     "Search": "ရှာရန်",
     "New Job": "အလုပ်သစ်",
     "Video Tutorial Links": "ဗီဒီယိုကျူတိုရီရယ်လင့်ခ်များ",
@@ -4641,6 +4825,10 @@ class UiText {
     "Daily Safety Tip": "နေ့စဉ် ဘေးကင်းရေး အကြံပြုချက်"
   },
   "km": {
+    "Exit": "ចាកចេញ",
+    "Are you sure you want to exit?": "តើអ្នកប្រាកដថាចង់ចាកចេញមែនទេ?",
+    "Yes": "បាទ/ចាស",
+    "No": "ទេ",
     "Video Tutorial Links": "តំណភ្ជាប់មេរៀនវីដេអូ",
     "Global Search": "ការស្វែងរកសកល",
     "Resistor Scanner": "ម៉ាស៊ីនស្កេនធន់ទ្រាំ",
@@ -4739,6 +4927,10 @@ class UiText {
     "Welcome Back,": "ស្វាគមន៍ការត្រឡប់មកវិញ,"
   },
   "si": {
+    "Exit": "පිටවීම",
+    "Are you sure you want to exit?": "ඔබට පිටවීමට අවශ්‍ය බව විශ්වාසද?",
+    "Yes": "ඔව්",
+    "No": "නැත",
     "Search": "සොයන්න",
     "Edit Job": "කාර්යය සංස්කරණය කරන්න",
     "Job / Project Name": "රැකියාව / ව්‍යාපෘතියේ නම",
@@ -4837,6 +5029,10 @@ class UiText {
     "Welcome Back,": "ආපසු සාදරයෙන් පිළිගනිමු,"
   },
   "am": {
+    "Exit": "ውጣ",
+    "Are you sure you want to exit?": "መውጣት እንደሚፈልጉ እርግጠኛ ነዎት?",
+    "Yes": "አዎ",
+    "No": "አይ",
     "Safety / Job Checklist": "የደህንነት / የስራ ማረጋገጫ ዝርዝር",
     "Save Job": "ኢዮብን አድን።",
     "Add Item": "ንጥል ያክሉ",

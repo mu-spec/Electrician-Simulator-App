@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/localization/app_localizations.dart';
+import '../../core/localization/ui_text.dart';
 import 'home/home_screen.dart';
 import 'theory/theory_screen.dart';
 import 'calculators/calculators_screen.dart';
@@ -33,12 +35,58 @@ class _MainScaffoldState extends State<MainScaffold> {
     BottomNavItem(icon: Icons.quiz_rounded, labelKey: 'quiz'),
   ];
 
+  /// Asks the user to confirm before the app exits.
+  ///
+  /// Returns true only when "Yes" is tapped. Tapping "No", tapping outside the
+  /// dialog, or dismissing it any other way all return false, so the app stays
+  /// open. barrierDismissible defaults to true, which is what makes the
+  /// tap-outside-to-dismiss behaviour work; showDialog then completes with null
+  /// and `?? false` turns that into "do not exit".
+  Future<bool> _confirmExit(BuildContext context) async {
+    final result = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Text(UiText.t(context, 'Exit')),
+        content: Text(UiText.t(context, 'Are you sure you want to exit?')),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext, false),
+            child: Text(UiText.t(context, 'No')),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext, true),
+            child: Text(UiText.t(context, 'Yes')),
+          ),
+        ],
+      ),
+    );
+    return result ?? false;
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     // Banner is global via MaterialApp.builder in main.dart
     // so it appears on ALL screens and sub-screens.
-    return Scaffold(
+    //
+    // PopScope intercepts the system back gesture/button on this root screen so
+    // the user is asked before the app closes. canPop is false so the framework
+    // never pops automatically; onPopInvokedWithResult decides what happens.
+    // Nested routes (article detail, calculators, etc.) are unaffected and pop
+    // normally, because this only guards the root of the navigator stack.
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+        final shouldExit = await _confirmExit(context);
+        if (shouldExit) {
+          // SystemNavigator.pop() is what actually closes the app on Android.
+          // Navigator.pop() would be a no-op here: MainScaffold is the root
+          // route, so there is nothing underneath it to pop back to.
+          await SystemNavigator.pop();
+        }
+      },
+      child: Scaffold(
       body: IndexedStack(
         index: _currentIndex,
         children: _screens,
@@ -103,7 +151,8 @@ class _MainScaffoldState extends State<MainScaffold> {
                     ),
                   ),
                 );
-              }),
+                }),
+              ),
             ),
           ),
         ),
