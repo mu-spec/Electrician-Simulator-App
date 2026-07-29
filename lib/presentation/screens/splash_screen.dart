@@ -257,41 +257,12 @@ class _SplashScreenState extends State<SplashScreen>
                 ),
               ),
             ),
-            // Bottom ad disclaimer - informs user about 20s ad wait so they don't feel stuck
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 0,
-              child: SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        UiText.t(context, 'This action may contain ads'),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        UiText.t(context, 'Please wait up to 6 seconds on first launch'),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 11,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+            // Ads are disabled in this build (see AdService.isAdsFree), so
+            // waitAndShowColdStartAppOpen() returns immediately and there is no
+            // ad wait. The "This action may contain ads" / "Please wait up to 6
+            // seconds" notice was removed because it described behaviour that no
+            // longer happens and contradicts the "no ads" Play Data safety
+            // declaration. Restore it only if ads are re-enabled.
           ],
         ),
       ),
