@@ -1,0 +1,23 @@
+{
+  "dart.analyzerVmAdditionalArgs": ["--old_gen_heap_size=2048"],
+  "editor.maxTokenizationLineLength": 2000,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": false,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": false,
+  "dart.previewFlutterUiGuides": false,
+  "dart.showTodos": false,
+  "git.autorefresh": false,
+  "git.autofetch": false,
+  "files.watcherExclude": {
+    "**/.dart_tool/**": true,
+    "**/build/**": true,
+    "**/.gradle/**": true,
+    "**/ios/Pods/**": true
+  },
+  "search.exclude": {
+    "**/.dart_tool": true,
+    "**/build": true,
+    "**/.gradle": true
+  }
+}
