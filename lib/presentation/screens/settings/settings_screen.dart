@@ -245,13 +245,6 @@ class SettingsScreen extends StatelessWidget {
                   title: l10n.t('privacyPolicy'),
                   onTap: () => _openPrivacyPolicy(context),
                 ),
-                const Divider(height: 1),
-                _SettingsTile(
-                  icon: Icons.star_outline,
-                  iconColor: AppTheme.accentOrange,
-                  title: l10n.t('rateApp'),
-                  onTap: () => _rateApp(context),
-                ),
               ],
             ),
             const SizedBox(height: 32),
@@ -344,32 +337,6 @@ class SettingsScreen extends StatelessWidget {
       ),
     );
   }
-
-  Future<void> _rateApp(BuildContext context) async {
-    final l10n = AppLocalizations.of(context);
-    // Play Store listing (will work once the app is published)
-    final uri = Uri.parse(
-      'https://play.google.com/store/apps/details?id=com.koreappstek.ElectricianSimulatorApp',
-    );
-    try {
-      final launched = await launchUrl(
-        uri,
-        mode: LaunchMode.externalApplication,
-      );
-      if (!launched && context.mounted) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text(l10n.t('couldNotOpenStore'))));
-      }
-    } catch (_) {
-      if (context.mounted) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text(l10n.t('couldNotOpenStore'))));
-      }
-    }
-  }
-
 }
 
 class _SettingsCard extends StatelessWidget {
