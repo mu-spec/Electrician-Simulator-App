@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../../core/ads/ad_service.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/theme/theme_cubit.dart';
 import '../../../core/localization/app_localizations.dart';
@@ -186,69 +185,6 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-            const SizedBox(height: 24),
-            // Ads (opt-in rewarded)
-            Text(
-              UiText.t(context, 'Ads'),
-              style: Theme.of(
-                context,
-              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 12),
-            ValueListenableBuilder<bool>(
-              valueListenable: AdService.instance.adsFreeNotifier,
-              builder: (context, adsFree, _) {
-                return _SettingsCard(
-                  children: [
-                    _SettingsTile(
-                      icon: Icons.workspace_premium_outlined,
-                      iconColor: AppTheme.accentOrange,
-                      title: adsFree
-                          ? UiText.t(context, 'Ads paused (reward active)')
-                          : UiText.t(context, 'Watch Ad · Remove Ads 24h'),
-                      subtitle: adsFree
-                          ? UiText.t(
-                              context,
-                              'Banner, interstitial and app-open ads are hidden temporarily.',
-                            )
-                          : UiText.t(
-                              context,
-                              'Optional. Watch a short ad to hide ads for 24 hours.',
-                            ),
-                      onTap: adsFree
-                          ? null
-                          : () async {
-                              final messenger = ScaffoldMessenger.of(context);
-                              final ok = await AdService.instance
-                                  .watchAdToRemoveAdsForOneDay();
-                              if (!context.mounted) return;
-                              messenger.showSnackBar(
-                                SnackBar(
-                                  content: Text(
-                                    UiText.t(
-                                      context,
-                                      ok
-                                          ? 'Ads removed for 24 hours. Enjoy!'
-                                          : 'Rewarded ad is not ready yet. Please try again in a moment.',
-                                    ),
-                                  ),
-                                ),
-                              );
-                            },
-                      trailing: adsFree
-                          ? const Icon(
-                              Icons.check_circle,
-                              color: AppTheme.accentGreen,
-                            )
-                          : const Icon(
-                              Icons.ondemand_video_outlined,
-                              color: AppTheme.accentOrange,
-                            ),
-                    ),
-                  ],
-                );
-              },
             ),
             const SizedBox(height: 24),
             // Data

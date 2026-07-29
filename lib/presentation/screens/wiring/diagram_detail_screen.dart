@@ -1,4 +1,3 @@
-import '../../../core/ads/ad_service.dart';
 import '../../../core/localization/ui_text.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
@@ -24,7 +23,6 @@ class _DiagramDetailScreenState extends State<DiagramDetailScreen> {
   @override
   void initState() {
     super.initState();
-    AdService.instance.onContentDetailOpened(type: 'wiring');
     _loadBookmarkState();
   }
 

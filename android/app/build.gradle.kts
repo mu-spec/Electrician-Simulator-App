@@ -19,7 +19,11 @@ android {
     // depend on whichever SDK is installed on the build machine, so it is not
     // reproducible across machines or CI.
     compileSdk = 36
-    ndkVersion = flutter.ndkVersion
+    // Pinned to NDK r28+, which produces 16 KB-aligned native libraries.
+    // Google Play requires 16 KB memory page support for apps targeting
+    // Android 15+ (enforced 1 Nov 2025). Inheriting flutter.ndkVersion made
+    // this depend on whichever NDK the build machine happened to have.
+    ndkVersion = "28.2.13676358"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -41,6 +45,14 @@ android {
         targetSdk = 36
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+
+        // Tell any CMake-built native code to use flexible (16 KB) page
+        // alignment. Harmless when no CMake project is present.
+        externalNativeBuild {
+            cmake {
+                arguments += "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+            }
+        }
 
         // NOTE:
         // Do NOT set ndk.abiFilters when using Flutter --split-per-abi /
@@ -71,7 +83,7 @@ android {
             }
             // Production optimization enabled: R8 full mode + resource shrinking
             // Saves ~15-18MB when combined with 50-language audit (38MB Dart)
-            // Proguard rules in proguard-rules.pro keep Flutter engine & AdMob
+            // Proguard rules in proguard-rules.pro keep the Flutter engine
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(

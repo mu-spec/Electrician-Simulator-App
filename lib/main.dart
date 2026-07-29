@@ -3,8 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'core/ads/ad_service.dart';
-import 'core/ads/banner_ad_widget.dart';
 import 'core/localization/app_localizations.dart';
 import 'core/localization/locale_cubit.dart';
 import 'core/theme/app_theme.dart';
@@ -14,13 +12,6 @@ import 'presentation/screens/splash_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-
-  // Await ads init so App Open can start loading before splash ends.
-  try {
-    await AdService.instance.initialize();
-  } catch (e) {
-    debugPrint('[Ads] init error ignored: $e');
-  }
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -68,15 +59,6 @@ class ElectricianSimulatorApp extends StatelessWidget {
                   GlobalWidgetsLocalizations.delegate,
                   GlobalCupertinoLocalizations.delegate,
                 ],
-                // Global banner on EVERY screen / sub-screen (including pushed routes).
-                builder: (context, child) {
-                  return Column(
-                    children: [
-                      Expanded(child: child ?? const SizedBox.shrink()),
-                      const BannerAdWidget(),
-                    ],
-                  );
-                },
                 home: const SplashScreen(),
               );
             },

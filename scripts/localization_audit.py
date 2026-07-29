@@ -2,7 +2,7 @@
 """Static 50-language coverage audit for Electrician Simulator App.
 
 Checks the exact translation catalogs, the current display-content fields,
-literal UiText calls, placeholders, the rewarded-ad strings, app-title wiring,
+literal UiText calls, placeholders, app-title wiring,
 and common hard-coded/raw-content regressions. No network access is required.
 """
 
@@ -218,17 +218,10 @@ def main() -> int:
                 fail(f"{code}: placeholder mismatch for {source!r}", errors)
                 break
 
-    # New rewarded-ad strings explicitly requested by product.
-    rewarded_strings = {
-        "Ads", "Ads paused (reward active)", "Watch Ad · Remove Ads 24h",
-        "Optional. Watch a short ad to hide ads for 24 hours.",
-        "Banner, interstitial and app-open ads are hidden temporarily.",
-        "Ads removed for 24 hours. Enjoy!",
-        "Rewarded ad is not ready yet. Please try again in a moment.",
-        "Watch Ad to Retry Free",
-    }
-    if not rewarded_strings.issubset(required_set | base_keys):
-        fail("Rewarded-ad localization keys are incomplete", errors)
+    # The rewarded-ad string check was removed when the advertising SDK was
+    # removed from the app. The translations themselves remain in the catalogs
+    # (removing catalog keys would change the expected key count and break the
+    # catalog-parity check), but nothing in the app renders them any more.
 
     # App name must be obtained through appTitle in all in-app locations.
     brand_files = [
@@ -283,7 +276,6 @@ def main() -> int:
     print(f"  Base exact keys per translated language: {base_count}")
     print(f"  Audit-generated exact keys per translated language: {len(required_set)}")
     print(f"  Total exact lookup coverage per translated language: {len(base_keys | required_set)}")
-    print(f"  Rewarded-ad strings checked: {len(rewarded_strings)}")
     print(f"  App-title language entries checked: {len(supported)}")
     if errors:
         print(f"  RESULT: FAIL ({len(errors)} issue(s))")

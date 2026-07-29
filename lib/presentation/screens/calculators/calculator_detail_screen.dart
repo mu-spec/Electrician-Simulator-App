@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../../../core/ads/ad_service.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/localization/app_localizations.dart';
 import '../../../core/localization/localized_content.dart';
@@ -124,8 +123,6 @@ class _CalculatorDetailScreenState extends State<CalculatorDetailScreen> {
         _hasCalculated = true;
       });
 
-      // Interstitial every 2nd successful calculation (frequency capped).
-      AdService.instance.onCalculatorResult();
     } on CalculationException catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(LocalizedContent.text(context, error.message))),

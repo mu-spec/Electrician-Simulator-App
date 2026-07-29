@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../../../core/ads/ad_service.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/localization/app_localizations.dart';
 import '../../../core/localization/localized_content.dart';
@@ -80,8 +79,6 @@ class _QuizPlayScreenState extends State<QuizPlayScreen> {
       'time_seconds': _timerSeconds,
     });
 
-    // Natural break: interstitial after quiz complete (test ads).
-    await AdService.instance.onQuizCompleted();
     if (!mounted) return;
 
     Navigator.pushReplacement(
@@ -582,54 +579,6 @@ class QuizResultScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-            const SizedBox(height: 12),
-            // Opt-in rewarded: free quiz retry without forcing users.
-            SizedBox(
-              width: double.infinity,
-              child: OutlinedButton.icon(
-                onPressed: () async {
-                  final messenger = ScaffoldMessenger.of(context);
-                  final nav = Navigator.of(context);
-                  final category = this.category;
-                  final questions = this.questions;
-
-                  final earned = await AdService.instance.watchAdForQuizRetry(
-                    onEarned: () {},
-                  );
-                  if (!context.mounted) return;
-
-                  if (!earned) {
-                    messenger.showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          UiText.t(
-                            context,
-                            'Rewarded ad is not ready yet. Please try again in a moment.',
-                          ),
-                        ),
-                      ),
-                    );
-                    return;
-                  }
-
-                  final fresh = List<QuizQuestion>.from(questions)..shuffle();
-                  nav.pushReplacement(
-                    MaterialPageRoute(
-                      builder: (_) => QuizPlayScreen(
-                        category: category,
-                        questions: fresh.isNotEmpty
-                            ? fresh
-                            : AppRepository.quizQuestions
-                                .where((q) => q.category == category.id)
-                                .toList(),
-                      ),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.ondemand_video_outlined, size: 18),
-                label: Text(UiText.t(context, 'Watch Ad to Retry Free')),
-              ),
             ),
             const SizedBox(height: 32),
           ],

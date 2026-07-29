@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'onboarding_screen.dart';
 import 'dart:async';
-import '../../core/ads/ad_service.dart';
 import '../../core/theme/app_theme.dart';
 import 'main_scaffold.dart';
 import '../../core/localization/app_localizations.dart';
@@ -60,16 +59,6 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> _goToHome() async {
     final box = await Hive.openBox('settings');
     final hasSeenOnboarding = box.get('hasSeenOnboarding', defaultValue: false);
-
-    // Block leaving splash until App Open is shown (or load fails / max wait).
-    // We do this FOR EVERYONE, so the ad shows on the splash screen before any navigation.
-    try {
-      await AdService.instance.waitAndShowColdStartAppOpen(
-        timeout: AdService.coldStartMaxWait, // safety max
-      );
-    } catch (_) {
-      // Ignore ad errors; still enter app.
-    }
 
     if (!mounted) return;
 
@@ -257,12 +246,9 @@ class _SplashScreenState extends State<SplashScreen>
                 ),
               ),
             ),
-            // Ads are disabled in this build (see AdService.isAdsFree), so
-            // waitAndShowColdStartAppOpen() returns immediately and there is no
-            // ad wait. The "This action may contain ads" / "Please wait up to 6
-            // seconds" notice was removed because it described behaviour that no
-            // longer happens and contradicts the "no ads" Play Data safety
-            // declaration. Restore it only if ads are re-enabled.
+            // This app serves no advertisements. The former "This action may
+            // contain ads" / "Please wait up to 6 seconds" notice was removed
+            // along with the ad system.
           ],
         ),
       ),

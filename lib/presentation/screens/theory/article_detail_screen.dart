@@ -3,7 +3,6 @@ import 'package:share_plus/share_plus.dart';
 import '../../../core/localization/app_localizations.dart';
 import '../../../core/localization/localized_content.dart';
 import '../../../core/localization/ui_text.dart';
-import '../../../core/ads/ad_service.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../data/database_service.dart';
 import '../../../data/repositories/app_repository.dart';
@@ -38,8 +37,6 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
   @override
   void initState() {
     super.initState();
-    // Soft interstitial cadence when opening theory articles.
-    AdService.instance.onContentDetailOpened(type: 'theory');
     _scrollController.addListener(_onScroll);
     _loadBookmarkState();
     DatabaseService.markArticleRead(widget.article.id);

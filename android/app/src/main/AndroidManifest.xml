@@ -1,14 +1,9 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Needed by google_fonts, connectivity_plus, share_plus, url_launcher -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <!-- Needed by Phase 3F resistor scanner reference photo capture -->
     <uses-permission android:name="android.permission.CAMERA"/>
-    <!-- Declares that the app reads the Android advertising ID.
-         The google_mobile_ads SDK merges this automatically; declaring it
-         explicitly keeps the Play Console "Does your app use advertising ID?"
-         answer (Yes) visible in source. -->
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
-
     <application
         android:label="Electrician Simulator App"
         android:name="${applicationName}"
@@ -40,19 +35,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-
-        <!-- Google AdMob App ID.
-             WARNING: this value must NEVER be empty. The Mobile Ads SDK reads it
-             at process start via MobileAdsInitProvider, before Flutter loads. An
-             empty or malformed value throws IllegalStateException and the app
-             crashes on launch with "Invalid application ID".
-
-             The value below is Google's PUBLIC TEST App ID. It is safe for
-             development but earns no revenue. Replace it with the real AdMob App
-             ID for com.koreappstek.ElectricianSimulatorApp before release. -->
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value=/>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and

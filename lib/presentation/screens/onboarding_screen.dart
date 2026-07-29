@@ -3,7 +3,6 @@ import 'package:electrician_simulator_app/core/localization/ui_text.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:electrician_simulator_app/presentation/screens/main_scaffold.dart';
 import 'package:electrician_simulator_app/core/theme/app_theme.dart';
-import 'package:electrician_simulator_app/core/ads/ad_service.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
