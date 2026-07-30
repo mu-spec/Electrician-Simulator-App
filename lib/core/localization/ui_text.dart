@@ -108,6 +108,7 @@ class UiText {
     'Previous': 'previous',
     'Next': 'next',
     'Circuit Diagram': 'circuitDiagram',
+    'Diagrams': 'diagrams',
     'Full Screen': 'fullScreen',
     'Safety Warnings': 'safetyWarnings',
     'Common Mistakes': 'commonMistakes',
@@ -133,6 +134,7 @@ class UiText {
 
   static const Map<String, Map<String, String>> _phrases = {
   "ur": {
+    "Diagrams": "ڈایاگرامز",
     "Exit": "باہر نکلیں",
     "Are you sure you want to exit?": "کیا آپ واقعی ایپ بند کرنا چاہتے ہیں؟",
     "Yes": "ہاں",
@@ -235,6 +237,7 @@ class UiText {
     "Welcome Back,": "دوبارہ خوش آمدید،"
   },
   "hi": {
+    "Diagrams": "डायग्राम",
     "Exit": "बाहर निकलें",
     "Are you sure you want to exit?": "क्या आप वाकई बाहर निकलना चाहते हैं?",
     "Yes": "हाँ",
@@ -337,6 +340,7 @@ class UiText {
     "Welcome Back,": "वापसी पर स्वागत है,"
   },
   "ar": {
+    "Diagrams": "مخططات",
     "Exit": "خروج",
     "Are you sure you want to exit?": "هل أنت متأكد أنك تريد الخروج؟",
     "Yes": "نعم",
@@ -439,6 +443,7 @@ class UiText {
     "Daily Safety Tip": "نصيحة السلامة اليومية"
   },
   "es": {
+    "Diagrams": "diagramas",
     "Exit": "Salir",
     "Are you sure you want to exit?": "¿Seguro que quieres salir?",
     "Yes": "Sí",
@@ -541,6 +546,7 @@ class UiText {
     "Daily Safety Tip": "Consejo de seguridad diario"
   },
   "pt": {
+    "Diagrams": "diagramas",
     "Exit": "Sair",
     "Are you sure you want to exit?": "Tem certeza de que deseja sair?",
     "Yes": "Sim",
@@ -643,6 +649,7 @@ class UiText {
     "Daily Safety Tip": "Dica diária de segurança"
   },
   "fr": {
+    "Diagrams": "diagrammes",
     "Exit": "Quitter",
     "Are you sure you want to exit?": "Voulez-vous vraiment quitter ?",
     "Yes": "Oui",
@@ -745,6 +752,7 @@ class UiText {
     "Welcome Back,": "Content de te revoir,"
   },
   "de": {
+    "Diagrams": "Diagramme",
     "Exit": "Beenden",
     "Are you sure you want to exit?": "Möchten Sie die App wirklich beenden?",
     "Yes": "Ja",
@@ -847,6 +855,7 @@ class UiText {
     "Welcome Back,": "Willkommen zurück,"
   },
   "ru": {
+    "Diagrams": "схемы",
     "Exit": "Выход",
     "Are you sure you want to exit?": "Вы уверены, что хотите выйти?",
     "Yes": "Да",
@@ -949,6 +958,7 @@ class UiText {
     "Daily Safety Tip": "Ежедневный совет по безопасности"
   },
   "zh": {
+    "Diagrams": "图表",
     "Exit": "退出",
     "Are you sure you want to exit?": "确定要退出吗？",
     "Yes": "是",
@@ -1051,6 +1061,7 @@ class UiText {
     "Welcome Back,": "欢迎回来，"
   },
   "tr": {
+    "Diagrams": "şemalar",
     "Exit": "Çıkış",
     "Are you sure you want to exit?": "Çıkmak istediğinizden emin misiniz?",
     "Yes": "Evet",
@@ -1153,6 +1164,7 @@ class UiText {
     "Daily Safety Tip": "Günlük Güvenlik İpucu"
   },
   "id": {
+    "Diagrams": "diagram",
     "Exit": "Keluar",
     "Are you sure you want to exit?": "Yakin ingin keluar?",
     "Yes": "Ya",
@@ -1255,6 +1267,7 @@ class UiText {
     "Daily Safety Tip": "Tip Keamanan Harian"
   },
   "bn": {
+    "Diagrams": "ডায়াগ্রাম",
     "Exit": "প্রস্থান",
     "Are you sure you want to exit?": "আপনি কি নিশ্চিত যে বের হতে চান?",
     "Yes": "হ্যাঁ",
@@ -1357,6 +1370,7 @@ class UiText {
     "Daily Safety Tip": "দৈনিক নিরাপত্তা টিপ"
   },
   "fa": {
+    "Diagrams": "نمودارها",
     "Exit": "خروج",
     "Are you sure you want to exit?": "آیا مطمئن هستید که می‌خواهید خارج شوید؟",
     "Yes": "بله",
@@ -1459,6 +1473,7 @@ class UiText {
     "Welcome Back,": "خوش آمدید،"
   },
   "ms": {
+    "Diagrams": "gambar rajah",
     "Exit": "Keluar",
     "Are you sure you want to exit?": "Adakah anda pasti mahu keluar?",
     "Yes": "Ya",
@@ -1561,6 +1576,7 @@ class UiText {
     "Welcome Back,": "Selamat Kembali,"
   },
   "it": {
+    "Diagrams": "Diagrammi",
     "Exit": "Esci",
     "Are you sure you want to exit?": "Vuoi davvero uscire?",
     "Yes": "Sì",
@@ -1663,6 +1679,7 @@ class UiText {
     "Daily Safety Tip": "Suggerimento quotidiano per la sicurezza"
   },
   "ja": {
+    "Diagrams": "回路図",
     "Exit": "終了",
     "Are you sure you want to exit?": "終了してもよろしいですか？",
     "Yes": "はい",
@@ -1765,6 +1782,7 @@ class UiText {
     "Daily Safety Tip": "日常の安全に関するヒント"
   },
   "ko": {
+    "Diagrams": "회로도",
     "Exit": "종료",
     "Are you sure you want to exit?": "종료하시겠습니까?",
     "Yes": "예",
@@ -1867,6 +1885,7 @@ class UiText {
     "Welcome Back,": "돌아온 것을 환영합니다."
   },
   "vi": {
+    "Diagrams": "Sơ đồ",
     "Exit": "Thoát",
     "Are you sure you want to exit?": "Bạn có chắc muốn thoát không?",
     "Yes": "Có",
@@ -1969,6 +1988,7 @@ class UiText {
     "Welcome Back,": "Chào mừng trở lại,"
   },
   "th": {
+    "Diagrams": "ไดอะแกรม",
     "Exit": "ออก",
     "Are you sure you want to exit?": "คุณแน่ใจหรือไม่ว่าต้องการออก?",
     "Yes": "ใช่",
@@ -2071,6 +2091,7 @@ class UiText {
     "Welcome Back,": "ยินดีต้อนรับกลับ"
   },
   "pl": {
+    "Diagrams": "Schematy",
     "Exit": "Wyjdź",
     "Are you sure you want to exit?": "Czy na pewno chcesz wyjść?",
     "Yes": "Tak",
@@ -2173,6 +2194,7 @@ class UiText {
     "Welcome Back,": "Witamy z powrotem,"
   },
   "nl": {
+    "Diagrams": "Schema's",
     "Exit": "Afsluiten",
     "Are you sure you want to exit?": "Weet je zeker dat je wilt afsluiten?",
     "Yes": "Ja",
@@ -2275,6 +2297,7 @@ class UiText {
     "Welcome Back,": "Welkom terug,"
   },
   "uk": {
+    "Diagrams": "Схеми",
     "Exit": "Вихід",
     "Are you sure you want to exit?": "Ви впевнені, що хочете вийти?",
     "Yes": "Так",
@@ -2377,6 +2400,7 @@ class UiText {
     "Welcome Back,": "Ласкаво просимо назад,"
   },
   "ro": {
+    "Diagrams": "Diagrame",
     "Exit": "Ieșire",
     "Are you sure you want to exit?": "Sigur doriți să ieșiți?",
     "Yes": "Da",
@@ -2479,6 +2503,7 @@ class UiText {
     "Daily Safety Tip": "Sfat zilnic de siguranță"
   },
   "sv": {
+    "Diagrams": "Scheman",
     "Exit": "Avsluta",
     "Are you sure you want to exit?": "Är du säker på att du vill avsluta?",
     "Yes": "Ja",
@@ -2581,6 +2606,7 @@ class UiText {
     "Welcome Back,": "Välkommen tillbaka,"
   },
   "hu": {
+    "Diagrams": "Diagramok",
     "Exit": "Kilépés",
     "Are you sure you want to exit?": "Biztosan ki szeretne lépni?",
     "Yes": "Igen",
@@ -2683,6 +2709,7 @@ class UiText {
     "Welcome Back,": "Isten hozott vissza,"
   },
   "cs": {
+    "Diagrams": "Schémata",
     "Exit": "Ukončit",
     "Are you sure you want to exit?": "Opravdu chcete ukončit aplikaci?",
     "Yes": "Ano",
@@ -2785,6 +2812,7 @@ class UiText {
     "Welcome Back,": "Vítejte zpět,"
   },
   "el": {
+    "Diagrams": "Διαγράμματα",
     "Exit": "Έξοδος",
     "Are you sure you want to exit?": "Είστε βέβαιοι ότι θέλετε να βγείτε;",
     "Yes": "Ναι",
@@ -2887,6 +2915,7 @@ class UiText {
     "Welcome Back,": "Καλώς ήρθες πίσω,"
   },
   "bg": {
+    "Diagrams": "Схеми",
     "Exit": "Изход",
     "Are you sure you want to exit?": "Сигурни ли сте, че искате да излезете?",
     "Yes": "Да",
@@ -2989,6 +3018,7 @@ class UiText {
     "Welcome Back,": "Добре дошъл обратно,"
   },
   "da": {
+    "Diagrams": "Diagrammer",
     "Exit": "Afslut",
     "Are you sure you want to exit?": "Er du sikker på, at du vil afslutte?",
     "Yes": "Ja",
@@ -3091,6 +3121,7 @@ class UiText {
     "Welcome Back,": "Velkommen tilbage,"
   },
   "fi": {
+    "Diagrams": "Kaaviot",
     "Exit": "Poistu",
     "Are you sure you want to exit?": "Haluatko varmasti poistua?",
     "Yes": "Kyllä",
@@ -3193,6 +3224,7 @@ class UiText {
     "Welcome Back,": "Tervetuloa takaisin,"
   },
   "no": {
+    "Diagrams": "Diagrammer",
     "Exit": "Avslutt",
     "Are you sure you want to exit?": "Er du sikker på at du vil avslutte?",
     "Yes": "Ja",
@@ -3295,6 +3327,7 @@ class UiText {
     "Welcome Back,": "Velkommen tilbake,"
   },
   "sk": {
+    "Diagrams": "Schémy",
     "Exit": "Ukončiť",
     "Are you sure you want to exit?": "Naozaj chcete ukončiť aplikáciu?",
     "Yes": "Áno",
@@ -3397,6 +3430,7 @@ class UiText {
     "Welcome Back,": "Vitajte späť,"
   },
   "hr": {
+    "Diagrams": "Sheme",
     "Exit": "Izlaz",
     "Are you sure you want to exit?": "Jeste li sigurni da želite izaći?",
     "Yes": "Da",
@@ -3499,6 +3533,7 @@ class UiText {
     "Welcome Back,": "dobro došao nazad,"
   },
   "sr": {
+    "Diagrams": "Шеме",
     "Exit": "Излаз",
     "Are you sure you want to exit?": "Да ли сте сигурни да желите да изађете?",
     "Yes": "Да",
@@ -3601,6 +3636,7 @@ class UiText {
     "Welcome Back,": "Добродошли назад,"
   },
   "ta": {
+    "Diagrams": "வரைபடங்கள்",
     "Exit": "வெளியேறு",
     "Are you sure you want to exit?": "நிச்சயமாக வெளியேற விரும்புகிறீர்களா?",
     "Yes": "ஆம்",
@@ -3703,6 +3739,7 @@ class UiText {
     "Daily Safety Tip": "தினசரி பாதுகாப்பு உதவிக்குறிப்பு"
   },
   "te": {
+    "Diagrams": "రేఖాచిత్రాలు",
     "Exit": "నిష్క్రమించు",
     "Are you sure you want to exit?": "మీరు ఖచ్చితంగా నిష్క్రమించాలనుకుంటున్నారా?",
     "Yes": "అవును",
@@ -3805,6 +3842,7 @@ class UiText {
     "Welcome Back,": "తిరిగి స్వాగతం,"
   },
   "kn": {
+    "Diagrams": "ರೇಖಾಚಿತ್ರಗಳು",
     "Exit": "ನಿರ್ಗಮಿಸು",
     "Are you sure you want to exit?": "ನೀವು ಖಚಿತವಾಗಿ ನಿರ್ಗಮಿಸಲು ಬಯಸುವಿರಾ?",
     "Yes": "ಹೌದು",
@@ -3907,6 +3945,7 @@ class UiText {
     "Daily Safety Tip": "ದೈನಂದಿನ ಸುರಕ್ಷತೆ ಸಲಹೆ"
   },
   "mr": {
+    "Diagrams": "आकृत्या",
     "Exit": "बाहेर पडा",
     "Are you sure you want to exit?": "तुम्हाला नक्की बाहेर पडायचे आहे का?",
     "Yes": "होय",
@@ -4009,6 +4048,7 @@ class UiText {
     "Welcome Back,": "परत स्वागत आहे,"
   },
   "gu": {
+    "Diagrams": "આકૃતિઓ",
     "Exit": "બહાર નીકળો",
     "Are you sure you want to exit?": "શું તમે ખરેખર બહાર નીકળવા માંગો છો?",
     "Yes": "હા",
@@ -4111,6 +4151,7 @@ class UiText {
     "Welcome Back,": "ફરી સ્વાગત છે,"
   },
   "pa": {
+    "Diagrams": "ਚਿੱਤਰ",
     "Exit": "ਬਾਹਰ ਜਾਓ",
     "Are you sure you want to exit?": "ਕੀ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਬਾਹਰ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
     "Yes": "ਹਾਂ",
@@ -4213,6 +4254,7 @@ class UiText {
     "Daily Safety Tip": "ਰੋਜ਼ਾਨਾ ਸੁਰੱਖਿਆ ਸੁਝਾਅ"
   },
   "sw": {
+    "Diagrams": "Michoro",
     "Exit": "Toka",
     "Are you sure you want to exit?": "Una uhakika unataka kutoka?",
     "Yes": "Ndiyo",
@@ -4315,6 +4357,7 @@ class UiText {
     "Welcome Back,": "Karibu tena,"
   },
   "tl": {
+    "Diagrams": "Mga Diagram",
     "Exit": "Lumabas",
     "Are you sure you want to exit?": "Sigurado ka bang gusto mong lumabas?",
     "Yes": "Oo",
@@ -4417,6 +4460,7 @@ class UiText {
     "Welcome Back,": "Maligayang Pagbabalik,"
   },
   "he": {
+    "Diagrams": "תרשימים",
     "Exit": "יציאה",
     "Are you sure you want to exit?": "האם אתה בטוח שברצונך לצאת?",
     "Yes": "כן",
@@ -4519,6 +4563,7 @@ class UiText {
     "Welcome Back,": "ברוך שובך,"
   },
   "az": {
+    "Diagrams": "Sxemlər",
     "Exit": "Çıxış",
     "Are you sure you want to exit?": "Çıxmaq istədiyinizə əminsiniz?",
     "Yes": "Bəli",
@@ -4621,6 +4666,7 @@ class UiText {
     "Welcome Back,": "Xoş gəldiniz,"
   },
   "uz": {
+    "Diagrams": "Sxemalar",
     "Exit": "Chiqish",
     "Are you sure you want to exit?": "Chiqmoqchi ekanligingizga ishonchingiz komilmi?",
     "Yes": "Ha",
@@ -4723,6 +4769,7 @@ class UiText {
     "Daily Safety Tip": "Kundalik xavfsizlik bo'yicha maslahat"
   },
   "my": {
+    "Diagrams": "ပုံကြမ်းများ",
     "Exit": "ထွက်ရန်",
     "Are you sure you want to exit?": "ထွက်လိုသည်မှာ သေချာပါသလား?",
     "Yes": "ဟုတ်",
@@ -4825,6 +4872,7 @@ class UiText {
     "Daily Safety Tip": "နေ့စဉ် ဘေးကင်းရေး အကြံပြုချက်"
   },
   "km": {
+    "Diagrams": "ដ្យាក្រាម",
     "Exit": "ចាកចេញ",
     "Are you sure you want to exit?": "តើអ្នកប្រាកដថាចង់ចាកចេញមែនទេ?",
     "Yes": "បាទ/ចាស",
@@ -4927,6 +4975,7 @@ class UiText {
     "Welcome Back,": "ស្វាគមន៍ការត្រឡប់មកវិញ,"
   },
   "si": {
+    "Diagrams": "රූප සටහන්",
     "Exit": "පිටවීම",
     "Are you sure you want to exit?": "ඔබට පිටවීමට අවශ්‍ය බව විශ්වාසද?",
     "Yes": "ඔව්",
@@ -5029,6 +5078,7 @@ class UiText {
     "Welcome Back,": "ආපසු සාදරයෙන් පිළිගනිමු,"
   },
   "am": {
+    "Diagrams": "ንድፎች",
     "Exit": "ውጣ",
     "Are you sure you want to exit?": "መውጣት እንደሚፈልጉ እርግጠኛ ነዎት?",
     "Yes": "አዎ",
