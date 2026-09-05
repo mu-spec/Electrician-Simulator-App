@@ -1,6 +1,6 @@
 workflows:
   android-release:
-    name: Android Release Build (arm64 + arm32)
+    name: Android Release Build (universal APK + AAB)
     instance_type: mac_mini_m1
     max_build_duration: 60
 
@@ -81,31 +81,57 @@ workflows:
 
       # Optimized localization architecture: 49 languages stored in assets/l10n/*.json.gz
       # Eliminates 46MB of static Dart string maps from libapp.so (saves ~15-20MB in APK)
-      # Builds one APK per ABI: arm64-v8a (64-bit) and armeabi-v7a (32-bit).
-      # x86 / x86_64 are deliberately excluded - those target emulators and a
-      # small number of Chromebooks, not real phones.
-      - name: Build release APKs (arm64-v8a + armeabi-v7a)
+      # ONE universal APK carrying both ARM ABIs in a single file.
+      #
+      # --split-per-abi is intentionally NOT used: it emits a separate APK per
+      # ABI. Omitting it makes Flutter pack every ABI listed by
+      # --target-platform into one app-release.apk.
+      #
+      # x86 / x86_64 stay excluded - they target emulators and a small number of
+      # Chromebooks, not real phones.
+      - name: Build universal release APK (armeabi-v7a + arm64-v8a)
         script: |
-          flutter build apk --release --split-per-abi --target-platform android-arm64,android-arm --obfuscate --split-debug-info=./symbols
-          echo "=== APK sizes (expect one arm64-v8a and one armeabi-v7a) ==="
-          ls -lh build/app/outputs/flutter-apk/*.apk
-          du -sh build/app/outputs/flutter-apk/
+          flutter build apk --release --target-platform android-arm64,android-arm --obfuscate --split-debug-info=./symbols
+          echo "=== Universal APK ==="
+          ls -lh build/app/outputs/flutter-apk/app-release.apk
 
-      - name: Build release App Bundle (arm64-v8a + armeabi-v7a)
+      # Fail the build if either ABI is missing from the universal APK, rather
+      # than discovering it after upload. unzip -l lists the archive contents;
+      # a compliant universal APK contains lib/<abi>/libflutter.so for each ABI.
+      - name: Verify universal APK contains both ABIs
+        script: |
+          set -e
+          APK=build/app/outputs/flutter-apk/app-release.apk
+          echo "=== Native libraries in $APK ==="
+          unzip -l "$APK" | grep '^.*lib/' || true
+          for ABI in armeabi-v7a arm64-v8a; do
+            if unzip -l "$APK" | grep -q "lib/$ABI/libflutter.so"; then
+              echo "OK: $ABI present"
+            else
+              echo "ERROR: $ABI missing from universal APK"
+              exit 1
+            fi
+          done
+          echo "=== Confirming x86 ABIs are absent ==="
+          if unzip -l "$APK" | grep -qE 'lib/(x86|x86_64)/'; then
+            echo "WARNING: unexpected x86 native libraries found"
+          else
+            echo "OK: no x86 / x86_64 libraries"
+          fi
+
+      # AAB for Google Play. Play splits this per device, so users still
+      # download only their own ABI.
+      - name: Build release App Bundle (armeabi-v7a + arm64-v8a)
         script: |
           flutter build appbundle --release --target-platform android-arm64,android-arm --obfuscate --split-debug-info=./symbols
-          echo "=== AAB size ==="
-          ls -lh build/app/outputs/bundle/release/*.aab
-          echo "The AAB now carries native libraries for both ARM ABIs, so the"
-          echo "uploaded file is larger than the previous arm64-only bundle."
-          echo "User download size is UNCHANGED: Play generates a per-device APK"
-          echo "containing only that device ABI."
+          echo "=== AAB ==="
+          ls -lh build/app/outputs/bundle/release/app-release.aab
 
     artifacts:
-      - build/app/outputs/flutter-apk/*arm64-v8a*.apk
-      - build/app/outputs/flutter-apk/*armeabi-v7a*.apk
-      - build/app/outputs/flutter-apk/*release*.apk
-      - build/app/outputs/bundle/release/*.aab
+      # Exact paths, not globs: a glob such as *release*.apk would also pick up
+      # per-ABI APKs if they ever reappear in the output directory.
+      - build/app/outputs/flutter-apk/app-release.apk
+      - build/app/outputs/bundle/release/app-release.aab
 
     publishing:
       email:
