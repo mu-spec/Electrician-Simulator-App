@@ -55,10 +55,14 @@ android {
         }
 
         // NOTE:
-        // Do NOT set ndk.abiFilters when using Flutter --split-per-abi /
-        // --target-platform (causes Gradle ABI conflict).
-        // ABI is locked via Flutter build flags to arm64 only:
-        //   --target-platform android-arm64
+        // Do NOT set ndk.abiFilters here when using Flutter --split-per-abi /
+        // --target-platform (causes a Gradle ABI conflict).
+        //
+        // ABIs are selected via Flutter build flags in codemagic.yaml:
+        //   --target-platform android-arm64,android-arm
+        //
+        // That produces 64-bit (arm64-v8a) and 32-bit (armeabi-v7a) native
+        // libraries. x86 and x86_64 are intentionally excluded.
     }
 
     signingConfigs {
