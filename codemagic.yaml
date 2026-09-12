@@ -81,51 +81,72 @@ workflows:
 
       # Optimized localization architecture: 49 languages stored in assets/l10n/*.json.gz
       # Eliminates 46MB of static Dart string maps from libapp.so (saves ~15-20MB in APK)
-      # ONE universal APK carrying both ARM ABIs in a single file.
+      # ONE universal APK carrying ARM64 (arm64-v8a) native libraries only.
       #
       # --split-per-abi is intentionally NOT used: it emits a separate APK per
       # ABI. Omitting it makes Flutter pack every ABI listed by
       # --target-platform into one app-release.apk.
       #
-      # x86 / x86_64 stay excluded - they target emulators and a small number of
-      # Chromebooks, not real phones.
-      - name: Build universal release APK (armeabi-v7a + arm64-v8a)
+      # armeabi-v7a / x86 / x86_64 stay excluded - the app ships 64-bit ARM
+      # only.
+      - name: Build universal release APK (arm64-v8a only)
         script: |
-          flutter build apk --release --target-platform android-arm64,android-arm --obfuscate --split-debug-info=./symbols
+          flutter build apk --release --target-platform android-arm64 --obfuscate --split-debug-info=./symbols
           echo "=== Universal APK ==="
           ls -lh build/app/outputs/flutter-apk/app-release.apk
 
-      # Fail the build if either ABI is missing from the universal APK, rather
-      # than discovering it after upload. unzip -l lists the archive contents;
-      # a compliant universal APK contains lib/<abi>/libflutter.so for each ABI.
-      - name: Verify universal APK contains both ABIs
+      # Fail the build if the APK is not arm64-v8a-only, rather than
+      # discovering it after upload. unzip -l lists the archive contents;
+      # a compliant APK contains lib/arm64-v8a/libflutter.so and no other ABI.
+      - name: Verify APK is arm64-v8a only
         script: |
           set -e
           APK=build/app/outputs/flutter-apk/app-release.apk
           echo "=== Native libraries in $APK ==="
           unzip -l "$APK" | grep '^.*lib/' || true
-          for ABI in armeabi-v7a arm64-v8a; do
-            if unzip -l "$APK" | grep -q "lib/$ABI/libflutter.so"; then
-              echo "OK: $ABI present"
-            else
-              echo "ERROR: $ABI missing from universal APK"
-              exit 1
-            fi
-          done
-          echo "=== Confirming x86 ABIs are absent ==="
-          if unzip -l "$APK" | grep -qE 'lib/(x86|x86_64)/'; then
-            echo "WARNING: unexpected x86 native libraries found"
+          if unzip -l "$APK" | grep -q "lib/arm64-v8a/libflutter.so"; then
+            echo "OK: arm64-v8a present"
           else
-            echo "OK: no x86 / x86_64 libraries"
+            echo "ERROR: arm64-v8a missing from APK"
+            exit 1
+          fi
+          echo "=== Confirming 32-bit ARM and x86 ABIs are absent ==="
+          if unzip -l "$APK" | grep -qE 'lib/(armeabi-v7a|x86|x86_64)/'; then
+            echo "ERROR: unexpected 32-bit ARM or x86 native libraries found"
+            exit 1
+          else
+            echo "OK: no armeabi-v7a / x86 / x86_64 libraries"
           fi
 
-      # AAB for Google Play. Play splits this per device, so users still
-      # download only their own ABI.
-      - name: Build release App Bundle (armeabi-v7a + arm64-v8a)
+      # AAB for Google Play, arm64-v8a only. Play splits this per device, so
+      # users still download only their own ABI.
+      - name: Build release App Bundle (arm64-v8a only)
         script: |
-          flutter build appbundle --release --target-platform android-arm64,android-arm --obfuscate --split-debug-info=./symbols
+          flutter build appbundle --release --target-platform android-arm64 --obfuscate --split-debug-info=./symbols
           echo "=== AAB ==="
           ls -lh build/app/outputs/bundle/release/app-release.aab
+
+      # Fail the build if the bundle is not arm64-v8a-only. An AAB is a zip;
+      # its native libraries live under base/lib/<abi>/.
+      - name: Verify AAB is arm64-v8a only
+        script: |
+          set -e
+          AAB=build/app/outputs/bundle/release/app-release.aab
+          echo "=== Native libraries in $AAB ==="
+          unzip -l "$AAB" | grep '^.*lib/' || true
+          if unzip -l "$AAB" | grep -q "base/lib/arm64-v8a/libflutter.so"; then
+            echo "OK: arm64-v8a present"
+          else
+            echo "ERROR: arm64-v8a missing from AAB"
+            exit 1
+          fi
+          echo "=== Confirming 32-bit ARM and x86 ABIs are absent ==="
+          if unzip -l "$AAB" | grep -qE 'base/lib/(armeabi-v7a|x86|x86_64)/'; then
+            echo "ERROR: unexpected 32-bit ARM or x86 native libraries found"
+            exit 1
+          else
+            echo "OK: no armeabi-v7a / x86 / x86_64 libraries"
+          fi
 
     artifacts:
       # Exact paths, not globs: a glob such as *release*.apk would also pick up
