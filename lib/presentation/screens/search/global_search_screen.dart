@@ -174,6 +174,14 @@ class _GlobalSearchScreenState extends State<GlobalSearchScreen> {
                     .map(
                       (suggestion) => ActionChip(
                         label: Text(LocalizedContent.text(context, suggestion)),
+                        // Explicit label color: the theme-level chipTheme.labelStyle
+                        // has no color, so the Material 3 default chip label color
+                        // is skipped and the text renders nearly invisible on the
+                        // light background. onSurface is the app's normal dark
+                        // text color (slate-800 in light, near-white in dark).
+                        labelStyle: TextStyle(
+                          color: Theme.of(context).colorScheme.onSurface,
+                        ),
                         onPressed: () {
                           _controller.text = suggestion;
                           setState(() => _query = suggestion);
