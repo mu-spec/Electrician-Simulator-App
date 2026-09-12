@@ -54,15 +54,17 @@ android {
             }
         }
 
-        // NOTE:
-        // Do NOT set ndk.abiFilters here when using Flutter --split-per-abi /
-        // --target-platform (causes a Gradle ABI conflict).
+        // ARM64-only packaging.
         //
-        // The ABI is selected via the Flutter build flags in codemagic.yaml:
-        //   --target-platform android-arm64
-        //
-        // That produces 64-bit (arm64-v8a) native libraries only.
-        // armeabi-v7a, x86 and x86_64 are intentionally excluded.
+        // Flutter's --target-platform android-arm64 (see codemagic.yaml) only
+        // controls the Flutter engine/AOT libraries. Native libraries shipped
+        // by plugin dependencies (e.g. jni's libdartjni.so) still get packaged
+        // for every ABI the dependency provides. This filter restricts final
+        // APK/AAB packaging to arm64-v8a only, so armeabi-v7a / x86 / x86_64
+        // libraries coming from dependencies are excluded from the artifacts.
+        ndk {
+            abiFilters += listOf("arm64-v8a")
+        }
     }
 
     signingConfigs {
