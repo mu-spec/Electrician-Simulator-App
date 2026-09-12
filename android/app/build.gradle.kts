@@ -54,16 +54,38 @@ android {
             }
         }
 
-        // ARM64-only packaging.
+        // ARM64-only ABI intent for this app module's own NDK work.
         //
-        // Flutter's --target-platform android-arm64 (see codemagic.yaml) only
-        // controls the Flutter engine/AOT libraries. Native libraries shipped
-        // by plugin dependencies (e.g. jni's libdartjni.so) still get packaged
-        // for every ABI the dependency provides. This filter restricts final
-        // APK/AAB packaging to arm64-v8a only, so armeabi-v7a / x86 / x86_64
-        // libraries coming from dependencies are excluded from the artifacts.
+        // NOTE: ndk.abiFilters alone cannot stop dependency-provided native
+        // libraries. The transitive jni plugin
+        // (sqflite -> path_provider -> path_provider_android -> jni_flutter
+        // -> jni) builds libdartjni.so via CMake inside its own library
+        // module, and AGP merges that module's ABIs into the app regardless
+        // of the app-level ndk.abiFilters. Flutter's
+        // --target-platform android-arm64 only scopes the engine/AOT libs and
+        // the ABI-scoped native-asset staging (CopyFlutterJniLibsTask), so it
+        // cannot help either. The packaging excludes below are the actual
+        // enforcement point for final APK/AAB contents.
         ndk {
             abiFilters += listOf("arm64-v8a")
+        }
+    }
+
+    // Final packaging gate: exclude every non-ARM64 ABI from the merged JNI
+    // libraries, no matter which source supplied them (plugin subprojects,
+    // AARs, native assets, app jniLibs). This removes libdartjni.so copies
+    // under lib/armeabi-v7a/ and lib/x86_64/ while keeping
+    // lib/arm64-v8a/libdartjni.so, applies to both APK and AAB outputs, and
+    // prevents any future dependency from silently bundling 32-bit/x86
+    // native libraries. Codemagic keeps --target-platform android-arm64 and
+    // its ABI verification steps remain enabled.
+    packaging {
+        jniLibs {
+            excludes += setOf(
+                "lib/armeabi-v7a/**",
+                "lib/x86/**",
+                "lib/x86_64/**",
+            )
         }
     }
 
