@@ -211,7 +211,7 @@ class _ModuleGrid extends StatelessWidget {
       ),
       _ModuleItem(
         UiText.t(context, 'Wiring Diagrams'),
-        '${UiText.digits(context, '20')} ${UiText.t(context, 'Diagrams')}',
+        '${UiText.digits(context, '20')} ${UiText.t(context, 'SVG Diagrams')}',
         Icons.account_tree_rounded,
         AppTheme.accentOrange,
         () => const WiringScreen(),
