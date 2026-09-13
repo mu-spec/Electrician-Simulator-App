@@ -161,3 +161,63 @@ workflows:
         notify:
           success: true
           failure: true
+
+  ios-release:
+    name: iOS Release Build (IPA)
+    instance_type: mac_mini_m1
+    max_build_duration: 60
+
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      # No Apple credentials are stored in this file. When signing is ready,
+      # attach it via Codemagic's Code Signing settings (iOS distribution
+      # certificate + provisioning profile, or App Store Connect API key) or
+      # reference a credential variable group here, e.g.:
+      #   groups:
+      #     - ios_signing_credentials
+
+    cache:
+      cache_paths:
+        - $FLUTTER_ROOT/.pub-cache
+        - $HOME/.cocoapods
+
+    scripts:
+      - name: Flutter version
+        script: |
+          flutter --version
+
+      - name: Clean project
+        script: |
+          flutter clean
+          rm -rf build
+
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+
+      - name: Install CocoaPods dependencies (ios/Podfile)
+        script: |
+          cd ios && pod install
+
+      # Release archive preparation. Exporting the IPA requires an iOS
+      # distribution certificate and a provisioning profile for
+      # com.koreappstek.electriciansimulatorapp to be configured in Codemagic
+      # first; until then this step stops at code signing with a clear error.
+      # No App Store Connect / TestFlight publishing is configured yet.
+      - name: Build release IPA
+        script: |
+          flutter build ipa --release --obfuscate --split-debug-info=./symbols-ios
+          ls -lh build/ios/ipa/
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true
