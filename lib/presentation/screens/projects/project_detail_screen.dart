@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:share_plus/share_plus.dart';
+import '../../../core/utils/share_helper.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/localization/ui_text.dart';
 import '../../../data/content/material_price_content.dart';
@@ -155,8 +155,9 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
       )
       ..writeln()
       ..writeln('${UiText.t(context, 'Notes:')} ${project['notes'] ?? ''}');
-    await Share.share(
-      buffer.toString(),
+    await shareText(
+      context,
+      text: buffer.toString(),
       subject: '${UiText.t(context, 'Job Summary')} - ${project['name']}',
     );
   }

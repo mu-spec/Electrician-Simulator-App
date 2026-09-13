@@ -3,7 +3,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:share_plus/share_plus.dart';
+import '../../../core/utils/share_helper.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/localization/app_localizations.dart';
 import '../../../core/localization/ui_text.dart';
@@ -100,8 +100,9 @@ class _ResistorScannerScreenState extends State<ResistorScannerScreen> {
           'Educational reference only. Verify component value with a meter where critical.',
         ),
       );
-    await Share.share(
-      message.toString(),
+    await shareText(
+      context,
+      text: message.toString(),
       subject: UiText.t(context, 'Resistor Color Code Result'),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:share_plus/share_plus.dart';
+import '../../../core/utils/share_helper.dart';
 import '../../../core/localization/app_localizations.dart';
 import '../../../core/localization/localized_content.dart';
 import '../../../core/localization/ui_text.dart';
@@ -141,8 +141,9 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
         ? LocalizedContent.articleSummary(context, widget.article)
         : _excerpt(localizedContent);
     final appTitle = AppLocalizations.of(context).t('appTitle');
-    Share.share(
-      '$title\n\n'
+    shareText(
+      context,
+      text: '$title\n\n'
       '${UiText.t(context, 'Read time:')} ${widget.article.readTimeMinutes} '
       '${UiText.t(context, 'min')}\n\n'
       '$summary\n\n'

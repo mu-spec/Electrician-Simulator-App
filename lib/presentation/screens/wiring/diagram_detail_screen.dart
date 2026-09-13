@@ -1,6 +1,6 @@
 import '../../../core/localization/ui_text.dart';
 import 'package:flutter/material.dart';
-import 'package:share_plus/share_plus.dart';
+import '../../../core/utils/share_helper.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/localization/app_localizations.dart';
 import '../../../core/localization/localized_content.dart';
@@ -131,8 +131,9 @@ class _DiagramDetailScreenState extends State<DiagramDetailScreen> {
         .map((entry) => '${entry.key + 1}. ${entry.value}')
         .join('\n');
     final appTitle = AppLocalizations.of(context).t('appTitle');
-    Share.share(
-      '$title\n\n'
+    shareText(
+      context,
+      text: '$title\n\n'
       '$description\n\n'
       '${UiText.t(context, 'Components:')}\n'
       '${components.map((item) => '• $item').join('\n')}\n\n'
