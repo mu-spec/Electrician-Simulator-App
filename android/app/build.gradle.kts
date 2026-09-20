@@ -112,6 +112,9 @@ android {
             // Production optimization enabled: R8 full mode + resource shrinking
             // Saves ~15-18MB when combined with 50-language audit (38MB Dart)
             // Proguard rules in proguard-rules.pro keep the Flutter engine
+            // AGP 9 note: with isShrinkResources=true, AGP 9+ automatically
+            // uses R8 optimized resource shrinking (code+resources analyzed
+            // together). This resolves the Play Console R8 recommendation.
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
