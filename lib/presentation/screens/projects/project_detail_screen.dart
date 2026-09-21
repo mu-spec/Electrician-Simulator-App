@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import '../../../core/storage/project_photo_storage.dart';
 import '../../../core/utils/share_helper.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/localization/ui_text.dart';
@@ -56,7 +57,22 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
       imageQuality: 75,
     );
     if (image == null) return;
-    await DatabaseService.addProjectPhoto(widget.projectId, image.path);
+
+    // Camera captures live in temporary storage, so copy the file somewhere
+    // permanent first and only record the permanent path in the database.
+    String? storedPath;
+    try {
+      storedPath = await ProjectPhotoStorage.persistProjectPhoto(
+        projectId: widget.projectId,
+        sourcePath: image.path,
+      );
+      await DatabaseService.addProjectPhoto(widget.projectId, storedPath);
+    } catch (_) {
+      // The copy succeeded but persisting the row did not: drop the copy so a
+      // failed insert cannot leave an orphan file behind.
+      await ProjectPhotoStorage.deletePhotoFile(storedPath);
+      return;
+    }
     if (mounted) setState(_reload);
   }
 

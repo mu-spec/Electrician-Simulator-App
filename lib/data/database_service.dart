@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:sqflite/sqflite.dart';
+import '../core/storage/project_photo_storage.dart';
 import '../models/certification_track.dart';
 import 'package:path/path.dart';
 
@@ -326,6 +327,9 @@ class DatabaseService {
     await db.delete('project_photos', where: 'project_id = ?', whereArgs: [id]);
     await db.delete('project_calculations', where: 'project_id = ?', whereArgs: [id]);
     await db.delete('project_checklist', where: 'project_id = ?', whereArgs: [id]);
+    // Drop the project's stored photo files too, so deleting a project leaves
+    // no orphan images or folders on disk.
+    await ProjectPhotoStorage.deleteProjectPhotoDirectory(id);
   }
 
   static Future<int> saveProjectItem(Map<String, dynamic> item) async {
@@ -392,7 +396,18 @@ class DatabaseService {
 
   static Future<void> deleteProjectPhoto(int id) async {
     final db = await database;
+    // Read the stored path before the row disappears, then remove both.
+    final rows = await db.query(
+      'project_photos',
+      columns: ['path'],
+      where: 'id = ?',
+      whereArgs: [id],
+      limit: 1,
+    );
     await db.delete('project_photos', where: 'id = ?', whereArgs: [id]);
+    if (rows.isNotEmpty) {
+      await ProjectPhotoStorage.deletePhotoFile(rows.first['path'] as String?);
+    }
   }
 
   static Future<int> addChecklistItem(int projectId, String title) async {
@@ -565,5 +580,8 @@ class DatabaseService {
     await db.delete('project_calculations');
     await db.delete('project_checklist');
     await db.delete('certification_progress');
+    // Photos live on disk as well as in the database, so drop the stored files
+    // too. Otherwise clearing all data would leave orphan images behind.
+    await ProjectPhotoStorage.deleteAllProjectPhotos();
   }
 }
