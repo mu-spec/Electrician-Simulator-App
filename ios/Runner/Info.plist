@@ -30,6 +30,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera access is used to capture project photos and resistor images.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Electrician Simulator App uses your photo library so you can select photos for electrical tools and project records.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
