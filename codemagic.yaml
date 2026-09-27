@@ -219,7 +219,10 @@ workflows:
       # No App Store Connect / TestFlight automatic publishing is configured.
       - name: Build release IPA
         script: |
-          flutter build ipa --release --obfuscate --split-debug-info=./symbols-ios
+          flutter build ipa --release \
+            --obfuscate \
+            --split-debug-info=./symbols-ios \
+            --export-options-plist=/Users/builder/export_options.plist
           ls -lh build/ios/ipa/
 
     artifacts:
