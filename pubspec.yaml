@@ -27,7 +27,7 @@ dependencies:
   # Utilities
   intl: ^0.20.2
   url_launcher: ^6.2.2
-  share_plus: ^7.2.1
+  share_plus: 10.0.1
   package_info_plus: 9.0.1
   image_picker: ^1.0.7
   pdf: ^3.11.1
@@ -35,6 +35,10 @@ dependencies:
 
   # No advertising SDK. This app serves no ads.
   # purchases_flutter: ^6.1.0
+
+dependency_overrides:
+  # Keep the plugin-based implementation with bundled iOS privacy manifest.
+  path_provider_foundation: 2.5.1
 
 dev_dependencies:
   flutter_test:
