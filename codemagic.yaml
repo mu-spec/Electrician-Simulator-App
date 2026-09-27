@@ -167,16 +167,23 @@ workflows:
     instance_type: mac_mini_m1
     max_build_duration: 60
 
+    # App Store Connect API key integration, connected in Codemagic as
+    # "Electrician App Apple Key". Used to load the App Store signing assets
+    # that are already stored in Codemagic.
+    integrations:
+      app_store_connect: Electrician App Apple Key
+
     environment:
       flutter: stable
       xcode: latest
       cocoapods: default
-      # No Apple credentials are stored in this file. When signing is ready,
-      # attach it via Codemagic's Code Signing settings (iOS distribution
-      # certificate + provisioning profile, or App Store Connect API key) or
-      # reference a credential variable group here, e.g.:
-      #   groups:
-      #     - ios_signing_credentials
+      # All signing assets live in Codemagic, never in this file: the Apple
+      # Distribution certificate (reference name electrician_distribution) and
+      # the App Store provisioning profile (electrician_appstore_profile).
+      # Codemagic installs the matching pair from this declaration.
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.koreappstek.electriciansimulatorapp
 
     cache:
       cache_paths:
@@ -201,11 +208,15 @@ workflows:
         script: |
           cd ios && pod install
 
-      # Release archive preparation. Exporting the IPA requires an iOS
-      # distribution certificate and a provisioning profile for
-      # com.koreappstek.electriciansimulatorapp to be configured in Codemagic
-      # first; until then this step stops at code signing with a clear error.
-      # No App Store Connect / TestFlight publishing is configured yet.
+      # Codemagic installs the certificate and provisioning profile declared in
+      # ios_signing above; this step applies them to the Xcode project. It runs
+      # before the IPA build so the archive is signed for App Store.
+      - name: Set up iOS code signing
+        script: xcode-project use-profiles
+
+      # Release archive. Signing artefacts from the step above are applied to
+      # the Xcode project, so this build is signed for App Store distribution.
+      # No App Store Connect / TestFlight automatic publishing is configured.
       - name: Build release IPA
         script: |
           flutter build ipa --release --obfuscate --split-debug-info=./symbols-ios
