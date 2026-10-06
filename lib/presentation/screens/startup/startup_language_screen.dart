@@ -32,7 +32,7 @@ class _StartupLanguageScreenState extends State<StartupLanguageScreen> {
     final codeToSave = _pendingCode ?? currentCode;
     // Persist and apply via the shared LocaleCubit
     await context.read<LocaleCubit>().setLanguageCode(codeToSave);
-    if (!mounted) return;
+    if (!context.mounted) return;
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(builder: (_) => const MainScaffold()),
     );
