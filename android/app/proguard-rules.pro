@@ -1,4 +1,4 @@
-# Flutter + Electrician Simulator App ProGuard rules for R8 full mode
+# Flutter + Electrical Engineering Guide ProGuard rules for R8 full mode
 # Keeps Flutter engine and plugins from being stripped
 
 -keep class io.flutter.app.** { *; }

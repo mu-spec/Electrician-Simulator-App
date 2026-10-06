@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static 50-language coverage audit for Electrician Simulator App.
+"""Static 50-language coverage audit for Electrical Engineering Guide.
 
 Checks the exact translation catalogs, the current display-content fields,
 literal UiText calls, placeholders, app-title wiring,
@@ -236,7 +236,7 @@ def main() -> int:
         # NOTE: home_screen.dart intentionally calls UiText.t(context, ...) with
         # the app name as the lookup key, which is localization-aware, so only a
         # bare quoted literal is a failure here.
-        if "'Electrician Simulator App'" in source and "UiText.t(" not in source:
+        if "'Electrical Engineering Guide'" in source and "UiText.t(" not in source:
             fail(f"Hard-coded app title remains in {path.relative_to(ROOT)}", errors)
 
     # Guard the previously raw content paths that caused English subcards.
@@ -271,7 +271,7 @@ def main() -> int:
         fail("Hard-coded literal Text widgets remain: " + "; ".join(hardcoded[:8]), errors)
 
     base_count = len(base_keys) - len(required_set) if base_keys else 0
-    print("Electrician Simulator App localization audit")
+    print("Electrical Engineering Guide localization audit")
     print(f"  Supported languages: {len(supported)} (English + {len(non_english)} translated)")
     print(f"  Base exact keys per translated language: {base_count}")
     print(f"  Audit-generated exact keys per translated language: {len(required_set)}")

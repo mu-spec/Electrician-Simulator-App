@@ -102,7 +102,7 @@ Neither is a blocker today. The link works.
 ## Apply and push
 
 ```cmd
-cd "D:\Apps\Electrician Simulator App\VoltMaster-Pro"
+cd "D:\Apps\Electrical Engineering Guide\VoltMaster-Pro"
 ```
 
 Extract `privacy_policy_link.zip` over the project, overwriting when prompted.

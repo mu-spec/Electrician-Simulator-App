@@ -80,7 +80,7 @@ class UiText {
   }
 
   static const Map<String, String> _englishToKey = {
-    'Electrician Simulator App': 'appTitle',
+    'Electrical Engineering Guide': 'appTitle',
     'Manual Resistor Band Reader': 'Resistor Scanner',
     'Take or choose a resistor photo, then select bands manually.\n\nThe photo is used only as a visual reference. Color bands must be selected manually.': 'tipKnownLive',
     'This action may contain ads': 'referenceNote',

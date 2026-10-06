@@ -48,7 +48,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
     setState(() => _sending = true);
     try {
       final info = await PackageInfo.fromPlatform();
-      final body = '''Hi Electrician Simulator App team,
+      final body = '''Hi Electrical Engineering Guide team,
 
 Category: $_category
 Rating: $_rating/5
@@ -68,7 +68,7 @@ Phase: 2I Closed Beta Candidate
         scheme: 'mailto',
         path: 'koreappstek@gmail.com',
         queryParameters: {
-          'subject': 'Electrician Simulator App Closed Beta Feedback - $_category',
+          'subject': 'Electrical Engineering Guide Closed Beta Feedback - $_category',
           'body': body,
         },
       );
@@ -131,7 +131,7 @@ Phase: 2I Closed Beta Candidate
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      UiText.t(context, 'Your feedback helps us improve the Electrician Simulator App.'),
+                      UiText.t(context, 'Your feedback helps us improve the Electrical Engineering Guide.'),
                       style: const TextStyle(height: 1.45),
                     ),
                   ),

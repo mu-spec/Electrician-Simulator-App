@@ -1,6 +1,6 @@
-# Electrician Simulator App — Beta Tester Guide
+# Electrical Engineering Guide — Beta Tester Guide
 
-Thank you for testing Electrician Simulator App.
+Thank you for testing Electrical Engineering Guide.
 
 ## What to Test
 

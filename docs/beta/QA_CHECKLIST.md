@@ -1,4 +1,4 @@
-# Electrician Simulator App — QA Checklist
+# Electrical Engineering Guide — QA Checklist
 
 ## Build QA
 

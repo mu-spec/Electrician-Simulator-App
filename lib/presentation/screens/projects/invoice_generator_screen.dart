@@ -67,7 +67,7 @@ class _InvoiceGeneratorScreenState extends State<InvoiceGeneratorScreen> {
               pw.Column(
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
                 children: [
-                  pw.Text(_businessName.text.trim().isEmpty ? 'Electrician Simulator App Electrical Services' : _businessName.text.trim(), style: pw.TextStyle(fontSize: 22, fontWeight: pw.FontWeight.bold, color: PdfColors.blue800)),
+                  pw.Text(_businessName.text.trim().isEmpty ? 'Electrical Engineering Guide Electrical Services' : _businessName.text.trim(), style: pw.TextStyle(fontSize: 22, fontWeight: pw.FontWeight.bold, color: PdfColors.blue800)),
                   if (_businessPhone.text.trim().isNotEmpty) pw.Text('${UiText.t(context, 'Phone:')} ${_businessPhone.text.trim()}'),
                   if (_businessAddress.text.trim().isNotEmpty) pw.Text(_businessAddress.text.trim()),
                 ],

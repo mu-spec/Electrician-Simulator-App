@@ -1,12 +1,12 @@
-# Privacy Policy — Electrician Simulator App
+# Privacy Policy — Electrical Engineering Guide
 
 Last updated: 2026-07-10
 
-Electrician Simulator App respects your privacy. This policy explains what data the app handles.
+Electrical Engineering Guide respects your privacy. This policy explains what data the app handles.
 
 ## Data Collection
 
-Electrician Simulator App does not collect, sell, transmit, or share personal data.
+Electrical Engineering Guide does not collect, sell, transmit, or share personal data.
 
 ## Local Storage
 

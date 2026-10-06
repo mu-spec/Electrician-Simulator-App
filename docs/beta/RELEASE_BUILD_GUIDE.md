@@ -1,4 +1,4 @@
-# Electrician Simulator App — Release Build Guide
+# Electrical Engineering Guide — Release Build Guide
 
 ## Current Version
 
@@ -62,7 +62,7 @@ adb install -r build/app/outputs/flutter-apk/app-release.apk
 ## Release Notes Draft
 
 ```text
-Electrician Simulator App 2.0 Closed Beta
+Electrical Engineering Guide 2.0 Closed Beta
 - 59 theory articles
 - 24 calculators
 - 31 wiring diagrams

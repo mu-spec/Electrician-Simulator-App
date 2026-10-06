@@ -79,7 +79,7 @@ class _HomeHeader extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                UiText.t(context, 'Electrician Simulator App'),
+                UiText.t(context, 'Electrical Engineering Guide'),
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                   fontWeight: FontWeight.w700,
                   letterSpacing: -0.6,

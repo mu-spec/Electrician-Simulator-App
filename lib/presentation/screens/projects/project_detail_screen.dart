@@ -128,7 +128,7 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
     if (project == null) return;
     final buffer = StringBuffer()
       ..writeln(
-        '${UiText.t(context, 'Electrician Simulator App')} ${UiText.t(context, 'Job Summary')}',
+        '${UiText.t(context, 'Electrical Engineering Guide')} ${UiText.t(context, 'Job Summary')}',
       )
       ..writeln('${UiText.t(context, 'Project:')} ${project['name']}')
       ..writeln('${UiText.t(context, 'Client:')} ${project['client']}')

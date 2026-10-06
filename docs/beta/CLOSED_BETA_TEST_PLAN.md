@@ -1,4 +1,4 @@
-# Electrician Simulator App — Closed Beta Test Plan
+# Electrical Engineering Guide — Closed Beta Test Plan
 
 Version: 2.0.0+20  
 Phase: 2I Closed Beta Candidate  

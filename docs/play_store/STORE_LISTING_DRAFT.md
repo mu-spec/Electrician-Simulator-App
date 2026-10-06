@@ -1,4 +1,4 @@
-# Electrician Simulator App — Play Store Listing Draft
+# Electrical Engineering Guide — Play Store Listing Draft
 
 Package: `com.koreappstek.ElectricianSimulatorApp`
 Last verified against source: 2026-07-29
@@ -8,7 +8,7 @@ Last verified against source: 2026-07-29
 
 ## App Name
 
-Electrician Simulator App
+Electrical Engineering Guide
 
 ## Short Description
 
@@ -16,7 +16,7 @@ Electrical theory, calculators, wiring diagrams, quizzes & Pakistan standards �
 
 ## Full Description
 
-Electrician Simulator App is an offline-first electrical engineering companion designed for electricians, apprentices, students, solar technicians, and electrical professionals.
+Electrical Engineering Guide is an offline-first electrical engineering companion designed for electricians, apprentices, students, solar technicians, and electrical professionals.
 
 Learn electrical theory, perform practical calculations, review wiring diagrams, practice quiz questions, and access Pakistan-focused reference notes in one app.
 
@@ -78,7 +78,7 @@ Learn electrical theory, perform practical calculations, review wiring diagrams,
 
 ## Safety Disclaimer
 
-Electrician Simulator App is for educational reference only. Electrical work can be dangerous and may be fatal if performed incorrectly. Always verify calculations, diagrams, and installation practices with the latest official electrical codes, PEC/local authority requirements, utility/DISCO/K-Electric requirements, manufacturer instructions, and qualified/licensed professionals.
+Electrical Engineering Guide is for educational reference only. Electrical work can be dangerous and may be fatal if performed incorrectly. Always verify calculations, diagrams, and installation practices with the latest official electrical codes, PEC/local authority requirements, utility/DISCO/K-Electric requirements, manufacturer instructions, and qualified/licensed professionals.
 
 ## Category
 

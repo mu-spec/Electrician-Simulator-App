@@ -1,4 +1,4 @@
-# Google Play Data Safety Notes — Electrician Simulator App
+# Google Play Data Safety Notes — Electrical Engineering Guide
 
 Last reviewed: 2026-07-29
 Package: `com.koreappstek.ElectricianSimulatorApp`
