@@ -183,8 +183,9 @@ class AppLocalizations {
     "inputs": "Ingressi",
     "pakistanStandards": "Standard e codici",
     "settings": "Impostazioni",
-    "wiring": "Cablaggio"
-  },
+    "wiring": "Cablaggio",
+    "chooseYourLanguage": "Scegli la tua lingua",
+    "selectLanguageSubtitle": "Seleziona la lingua che vuoi usare"},
   "ja": {
     "theory": "理論",
     "quiz": "クイズ",
@@ -284,8 +285,9 @@ class AppLocalizations {
     "couldNotOpenStore": "Play ストアを開けませんでした",
     "cancel": "キャンセル",
     "supportEmailBody": "koreappstek@gmail.com までメールでお問い合わせください。通常、48 時間以内に返信させていただきます。",
-    "supportEmailTitle": "サポートに連絡する"
-  },
+    "supportEmailTitle": "サポートに連絡する",
+    "chooseYourLanguage": "言語を選択してください",
+    "selectLanguageSubtitle": "使用したい言語を選択してください"},
   "ko": {
     "tools": "도구",
     "theory": "이론",
@@ -385,8 +387,9 @@ class AppLocalizations {
     "betaFeedbackDesc": "버그, 잘못된 수식, 콘텐츠 수정 또는 제안을 신고하세요.",
     "manageBookmarksDesc": "저장된 기사 및 다이어그램 관리",
     "clear": "분명한",
-    "appVersion": "버전 2.0.0 비공개 베타"
-  },
+    "appVersion": "버전 2.0.0 비공개 베타",
+    "chooseYourLanguage": "언어를 선택하세요",
+    "selectLanguageSubtitle": "사용할 언어를 선택하세요"},
   "vi": {
     "home": "Trang chủ",
     "continueReading": "Tiếp tục đọc",
@@ -486,8 +489,9 @@ class AppLocalizations {
     "toggleTheme": "Chuyển đổi chủ đề tối/sáng",
     "clearData": "Xóa dữ liệu",
     "cancel": "Hủy bỏ",
-    "appVersion": "Phiên bản 2.0.0 Closed Beta"
-  },
+    "appVersion": "Phiên bản 2.0.0 Closed Beta",
+    "chooseYourLanguage": "Chọn ngôn ngữ của bạn",
+    "selectLanguageSubtitle": "Chọn ngôn ngữ bạn muốn sử dụng"},
   "th": {
     "continueReading": "อ่านต่อ",
     "wiringDiagrams": "แผนภาพการเดินสายไฟ",
@@ -587,8 +591,9 @@ class AppLocalizations {
     "madeForElectricians": "ทำด้วย ❤️ สำหรับช่างไฟฟ้า",
     "dataStorage": "ข้อมูลและการจัดเก็บ",
     "about": "เกี่ยวกับ",
-    "supportEmailTitle": "ติดต่อฝ่ายสนับสนุน"
-  },
+    "supportEmailTitle": "ติดต่อฝ่ายสนับสนุน",
+    "chooseYourLanguage": "เลือกภาษาของคุณ",
+    "selectLanguageSubtitle": "เลือกภาษาที่คุณต้องการใช้"},
   "pl": {
     "home": "Dom",
     "wiring": "Okablowanie",
@@ -688,8 +693,9 @@ class AppLocalizations {
     "supportEmailBody": "Napisz do nas na adres: koreappstek@gmail.com. Zwykle odpowiadamy w ciągu 48 godzin.",
     "couldNotOpenStore": "Nie można otworzyć Sklepu Play",
     "appVersion": "Wersja 2.0.0 Zamknięta Beta",
-    "clearDataWarning": "Spowoduje to usunięcie wszystkich zapisanych obliczeń, wyników quizów i zakładek. Tej akcji nie można cofnąć."
-  },
+    "clearDataWarning": "Spowoduje to usunięcie wszystkich zapisanych obliczeń, wyników quizów i zakładek. Tej akcji nie można cofnąć.",
+    "chooseYourLanguage": "Wybierz język",
+    "selectLanguageSubtitle": "Wybierz język, którego chcesz używać"},
   "nl": {
     "continueReading": "Ga door met lezen",
     "popularTools": "Populaire hulpmiddelen",
@@ -789,8 +795,9 @@ class AppLocalizations {
     "appVersion": "Versie 2.0.0 gesloten bèta",
     "madeForElectricians": "Gemaakt met ❤️ voor elektriciens",
     "question": "Vraag",
-    "supportEmailBody": "E-mail ons op: koreappstek@gmail.com. Wij antwoorden doorgaans binnen 48 uur."
-  },
+    "supportEmailBody": "E-mail ons op: koreappstek@gmail.com. Wij antwoorden doorgaans binnen 48 uur.",
+    "chooseYourLanguage": "Kies je taal",
+    "selectLanguageSubtitle": "Selecteer de taal die je wilt gebruiken"},
   "uk": {
     "theory": "Теорія",
     "welcomeBack": "Ласкаво просимо назад,",
@@ -890,8 +897,9 @@ class AppLocalizations {
     "termsOfUse": "Умови використання",
     "betaFeedbackDesc": "Повідомте про помилки, неправильні формули, виправлення вмісту або пропозиції",
     "contactSupport": "Зверніться до служби підтримки",
-    "videoTutorialLinks": "Посилання на відеоінструкції"
-  },
+    "videoTutorialLinks": "Посилання на відеоінструкції",
+    "chooseYourLanguage": "Виберіть мову",
+    "selectLanguageSubtitle": "Виберіть мову, яку хочете використовувати"},
   "ro": {
     "wiringDiagrams": "Scheme de cablare",
     "quizProgress": "Progresul testului",
@@ -991,8 +999,9 @@ class AppLocalizations {
     "language": "Limbă",
     "offlineContent": "Conținut offline",
     "offlineContentDesc": "Tot conținutul disponibil offline",
-    "supportEmailTitle": "Contactați asistența"
-  },
+    "supportEmailTitle": "Contactați asistența",
+    "chooseYourLanguage": "Alege limba",
+    "selectLanguageSubtitle": "Selectează limba pe care vrei să o folosești"},
   "sv": {
     "wiringDiagrams": "Kopplingsscheman",
     "quiz": "Frågesport",
@@ -1092,8 +1101,9 @@ class AppLocalizations {
     "couldNotOpenStore": "Det gick inte att öppna Play Butik",
     "supportEmailTitle": "Kontakta support",
     "about": "Om",
-    "supportEmailBody": "Maila oss på: koreappstek@gmail.com. Vi svarar vanligtvis inom 48 timmar."
-  },
+    "supportEmailBody": "Maila oss på: koreappstek@gmail.com. Vi svarar vanligtvis inom 48 timmar.",
+    "chooseYourLanguage": "Välj ditt språk",
+    "selectLanguageSubtitle": "Välj det språk du vill använda"},
   "hu": {
     "tools": "Eszközök",
     "home": "Otthon",
@@ -1193,8 +1203,9 @@ class AppLocalizations {
     "supportEmailBody": "Írjon nekünk a következő címre: koreappstek@gmail.com. Általában 48 órán belül válaszolunk.",
     "educationalDisclaimer": "Csak oktatási referencia. Ellenőrizze a legújabb hivatalos követelményeket és képzett szakembereket.",
     "clearDataWarning": "Ezzel törli az összes mentett számítást, teszteredményt és könyvjelzőt. Ez a művelet nem vonható vissza.",
-    "clearDataDesc": "Törölje a mentett számításokat és előzményeket"
-  },
+    "clearDataDesc": "Törölje a mentett számításokat és előzményeket",
+    "chooseYourLanguage": "Válaszd ki a nyelved",
+    "selectLanguageSubtitle": "Válaszd ki a használni kívánt nyelvet"},
   "cs": {
     "theory": "Teorie",
     "appTitle": "Electrician Simulator App",
@@ -1294,8 +1305,9 @@ class AppLocalizations {
     "betaFeedbackDesc": "Nahlašte chyby, nesprávné vzorce, opravy obsahu nebo návrhy",
     "clear": "Jasný",
     "supportEmailBody": "Napište nám na adresu: koreappstek@gmail.com. Obvykle odpovídáme do 48 hodin.",
-    "appVersion": "Verze 2.0.0 Uzavřená beta"
-  },
+    "appVersion": "Verze 2.0.0 Uzavřená beta",
+    "chooseYourLanguage": "Vyberte svůj jazyk",
+    "selectLanguageSubtitle": "Vyberte jazyk, který chcete používat"},
   "el": {
     "appTitle": "Electrician Simulator App",
     "theoryAcademy": "Θεωρητική Ακαδημία",
@@ -1395,8 +1407,9 @@ class AppLocalizations {
     "appVersion": "Έκδοση 2.0.0 Κλειστή Beta",
     "globalSearchDesc": "Αναζήτηση άρθρων, εργαλείων, διαγραμμάτων, κουίζ, προτύπων και βίντεο",
     "clear": "Σαφής",
-    "couldNotOpenStore": "Δεν ήταν δυνατό το άνοιγμα του Play Store"
-  },
+    "couldNotOpenStore": "Δεν ήταν δυνατό το άνοιγμα του Play Store",
+    "chooseYourLanguage": "Επιλέξτε τη γλώσσα σας",
+    "selectLanguageSubtitle": "Επιλέξτε τη γλώσσα που θέλετε να χρησιμοποιήσετε"},
   "bg": {
     "searchDiagrams": "Търсене на диаграми, компоненти...",
     "wiringDiagrams": "Електрически схеми",
@@ -1496,8 +1509,9 @@ class AppLocalizations {
     "betaFeedbackDesc": "Докладвайте грешки, грешни формули, корекции на съдържанието или предложения",
     "appVersion": "Версия 2.0.0 Затворена бета версия",
     "couldNotOpenStore": "Play Store не можа да се отвори",
-    "supportEmailBody": "Изпратете ни имейл на: koreappstek@gmail.com. Обикновено отговаряме в рамките на 48 часа."
-  },
+    "supportEmailBody": "Изпратете ни имейл на: koreappstek@gmail.com. Обикновено отговаряме в рамките на 48 часа.",
+    "chooseYourLanguage": "Изберете езика си",
+    "selectLanguageSubtitle": "Изберете езика, който искате да използвате"},
   "da": {
     "theory": "Teori",
     "appTitle": "Electrician Simulator App",
@@ -1597,8 +1611,9 @@ class AppLocalizations {
     "jobManagerDesc": "Opret job, kunde-/sitenotater, materialenotater og statussporing",
     "viewCalcHistoryDesc": "Se din beregningshistorik",
     "clearDataTitle": "Vil du rydde alle data?",
-    "offlineContentDesc": "Alt indhold tilgængeligt offline"
-  },
+    "offlineContentDesc": "Alt indhold tilgængeligt offline",
+    "chooseYourLanguage": "Vælg dit sprog",
+    "selectLanguageSubtitle": "Vælg det sprog, du vil bruge"},
   "fi": {
     "popularTools": "Suositut työkalut",
     "inputs": "Tulot",
@@ -1698,8 +1713,9 @@ class AppLocalizations {
     "clearDataDesc": "Poista tallennetut laskelmat ja historia",
     "cancel": "Peruuttaa",
     "clearDataTitle": "Tyhjennä kaikki tiedot?",
-    "clear": "Selkeä"
-  },
+    "clear": "Selkeä",
+    "chooseYourLanguage": "Valitse kieli",
+    "selectLanguageSubtitle": "Valitse kieli, jota haluat käyttää"},
   "no": {
     "theory": "Teori",
     "home": "Hjem",
@@ -1799,8 +1815,9 @@ class AppLocalizations {
     "startRandomQuiz": "Start tilfeldig quiz (10 spørsmål)",
     "supportEmailBody": "Send oss ​​en e-post på: koreappstek@gmail.com. Vi svarer vanligvis innen 48 timer.",
     "clearDataDesc": "Slett lagrede beregninger og historikk",
-    "clearDataWarning": "Dette vil slette alle lagrede beregninger, quizresultater og bokmerker. Denne handlingen kan ikke angres."
-  },
+    "clearDataWarning": "Dette vil slette alle lagrede beregninger, quizresultater og bokmerker. Denne handlingen kan ikke angres.",
+    "chooseYourLanguage": "Velg språket ditt",
+    "selectLanguageSubtitle": "Velg språket du vil bruke"},
   "sk": {
     "wiring": "Elektroinštalácia",
     "quiz": "Kvíz",
@@ -1900,8 +1917,9 @@ class AppLocalizations {
     "clear": "Jasné",
     "globalSearchDesc": "Vyhľadávajte články, nástroje, diagramy, kvízy, normy a videá",
     "supportEmailTitle": "Kontaktujte podporu",
-    "clearDataWarning": "Týmto sa odstránia všetky uložené výpočty, výsledky kvízov a záložky. Túto akciu nie je možné vrátiť späť."
-  },
+    "clearDataWarning": "Týmto sa odstránia všetky uložené výpočty, výsledky kvízov a záložky. Túto akciu nie je možné vrátiť späť.",
+    "chooseYourLanguage": "Vyberte svoj jazyk",
+    "selectLanguageSubtitle": "Vyberte jazyk, ktorý chcete používať"},
   "hr": {
     "wiring": "Ožičenje",
     "tools": "Alati",
@@ -2001,8 +2019,9 @@ class AppLocalizations {
     "clearDataTitle": "Obrisati sve podatke?",
     "supportEmailBody": "Pošaljite nam e-poruku na: koreappstek@gmail.com. Obično odgovaramo u roku od 48 sati.",
     "appVersion": "Zatvorena beta verzija 2.0.0",
-    "allDataCleared": "Svi podaci izbrisani"
-  },
+    "allDataCleared": "Svi podaci izbrisani",
+    "chooseYourLanguage": "Odaberite jezik",
+    "selectLanguageSubtitle": "Odaberite jezik koji želite koristiti"},
   "sr": {
     "appVersion": "Верзија 2.0.0 затворена бета",
     "couldNotOpenStore": "Није могуће отворити Плаи продавницу",
@@ -2102,8 +2121,9 @@ class AppLocalizations {
     "questions": "питања",
     "question": "Питање",
     "stepByStepGuide": "Водич корак по корак",
-    "testYourKnowledge": "Тестирајте своје знање"
-  },
+    "testYourKnowledge": "Тестирајте своје знање",
+    "chooseYourLanguage": "Изаберите језик",
+    "selectLanguageSubtitle": "Изаберите језик који желите да користите"},
   "ta": {
     "searchStandards": "ஐஇசி, என்இசி, பிஎஸ் 7671, பிஇசி, சோலார்...",
     "theory": "கோட்பாடு",
@@ -2203,8 +2223,9 @@ class AppLocalizations {
     "viewCalcHistoryDesc": "உங்கள் கணக்கீடு வரலாற்றைப் பார்க்கவும்",
     "clearDataWarning": "இது சேமிக்கப்பட்ட கணக்கீடுகள், வினாடி வினா முடிவுகள் மற்றும் புக்மார்க்குகள் அனைத்தையும் நீக்கும். இந்தச் செயலைச் செயல்தவிர்க்க முடியாது.",
     "close": "மூடு",
-    "manageBookmarksDesc": "சேமித்த கட்டுரைகள் மற்றும் வரைபடங்களை நிர்வகிக்கவும்"
-  },
+    "manageBookmarksDesc": "சேமித்த கட்டுரைகள் மற்றும் வரைபடங்களை நிர்வகிக்கவும்",
+    "chooseYourLanguage": "உங்கள் மொழியைத் தேர்வு செய்யவும்",
+    "selectLanguageSubtitle": "நீங்கள் பயன்படுத்த விரும்பும் மொழியைத் தேர்வு செய்யவும்"},
   "te": {
     "appTitle": "Electrician Simulator App",
     "home": "హోమ్",
@@ -2304,8 +2325,9 @@ class AppLocalizations {
     "retry": "మళ్లీ ప్రయత్నించండి",
     "supportEmailBody": "మాకు ఇమెయిల్ పంపండి: koreappstek@gmail.com. మేము సాధారణంగా 48 గంటల్లో ప్రత్యుత్తరం ఇస్తాము.",
     "couldNotOpenStore": "Play స్టోర్‌ని తెరవడం సాధ్యపడలేదు",
-    "supportEmailTitle": "మద్దతును సంప్రదించండి"
-  },
+    "supportEmailTitle": "మద్దతును సంప్రదించండి",
+    "chooseYourLanguage": "మీ భాషను ఎంచుకోండి",
+    "selectLanguageSubtitle": "మీరు ఉపయోగించాలనుకుంటున్న భాషను ఎంచుకోండి"},
   "kn": {
     "wiring": "ವೈರಿಂಗ್",
     "home": "ಮುಖಪುಟ",
@@ -2405,8 +2427,9 @@ class AppLocalizations {
     "supportEmailTitle": "ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ",
     "allDataCleared": "ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ತೆರವುಗೊಳಿಸಲಾಗಿದೆ",
     "relatedAppContent": "ಸಂಬಂಧಿತ ಅಪ್ಲಿಕೇಶನ್ ವಿಷಯ",
-    "couldNotOpenStore": "Play Store ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
-  },
+    "couldNotOpenStore": "Play Store ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ",
+    "chooseYourLanguage": "ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "selectLanguageSubtitle": "ನೀವು ಬಳಸಲು ಬಯಸುವ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ"},
   "mr": {
     "home": "घर",
     "appTitle": "Electrician Simulator App",
@@ -2506,8 +2529,9 @@ class AppLocalizations {
     "clear": "साफ",
     "appVersion": "आवृत्ती 2.0.0 बंद बीटा",
     "referenceNote": "संदर्भ नोट",
-    "clearDataDesc": "जतन केलेली गणना आणि इतिहास हटवा"
-  },
+    "clearDataDesc": "जतन केलेली गणना आणि इतिहास हटवा",
+    "chooseYourLanguage": "तुमची भाषा निवडा",
+    "selectLanguageSubtitle": "तुम्हाला वापरायची असलेली भाषा निवडा"},
   "gu": {
     "wiring": "વાયરિંગ",
     "calculators": "કેલ્ક્યુલેટર",
@@ -2607,8 +2631,9 @@ class AppLocalizations {
     "supportEmailBody": "અમને અહીં ઇમેઇલ કરો: koreappstek@gmail.com. અમે સામાન્ય રીતે 48 કલાકની અંદર જવાબ આપીએ છીએ.",
     "supportEmailTitle": "સપોર્ટનો સંપર્ક કરો",
     "jobManager": "જોબ મેનેજર",
-    "viewCalcHistoryDesc": "તમારો ગણતરી ઇતિહાસ જુઓ"
-  },
+    "viewCalcHistoryDesc": "તમારો ગણતરી ઇતિહાસ જુઓ",
+    "chooseYourLanguage": "તમારી ભાષા પસંદ કરો",
+    "selectLanguageSubtitle": "તમે વાપરવા માંગતા હો તે ભાષા પસંદ કરો"},
   "pa": {
     "home": "ਘਰ",
     "settings": "ਸੈਟਿੰਗਾਂ",
@@ -2708,8 +2733,9 @@ class AppLocalizations {
     "clearDataTitle": "ਕੀ ਸਾਰਾ ਡਾਟਾ ਸਾਫ਼ ਕਰਨਾ ਹੈ?",
     "madeForElectricians": "ਇਲੈਕਟ੍ਰੀਸ਼ੀਅਨਾਂ ਲਈ ❤️ ਨਾਲ ਬਣਾਇਆ ਗਿਆ",
     "toggleTheme": "ਡਾਰਕ/ਲਾਈਟ ਥੀਮ ਨੂੰ ਟੌਗਲ ਕਰੋ",
-    "couldNotOpenStore": "ਪਲੇ ਸਟੋਰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
-  },
+    "couldNotOpenStore": "ਪਲੇ ਸਟੋਰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ",
+    "chooseYourLanguage": "ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ",
+    "selectLanguageSubtitle": "ਉਹ ਭਾਸ਼ਾ ਚੁਣੋ ਜੋ ਤੁਸੀਂ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ"},
   "sw": {
     "quiz": "Maswali",
     "wiringDiagrams": "Michoro ya Wiring",
@@ -2809,8 +2835,9 @@ class AppLocalizations {
     "clearDataTitle": "Futa Data Yote?",
     "betaFeedbackDesc": "Ripoti hitilafu, fomula zisizo sahihi, masahihisho ya maudhui au mapendekezo",
     "supportEmailTitle": "Wasiliana na Usaidizi",
-    "clearDataWarning": "Hii itafuta hesabu zote zilizohifadhiwa, matokeo ya maswali na vialamisho. Kitendo hiki hakiwezi kutenduliwa."
-  },
+    "clearDataWarning": "Hii itafuta hesabu zote zilizohifadhiwa, matokeo ya maswali na vialamisho. Kitendo hiki hakiwezi kutenduliwa.",
+    "chooseYourLanguage": "Chagua lugha yako",
+    "selectLanguageSubtitle": "Chagua lugha unayotaka kutumia"},
   "tl": {
     "settings": "Mga setting",
     "quiz": "Pagsusulit",
@@ -2910,8 +2937,9 @@ class AppLocalizations {
     "contactSupport": "Makipag-ugnayan sa Suporta",
     "sendBetaFeedback": "Magpadala ng Beta Feedback",
     "couldNotOpenStore": "Hindi mabuksan ang Play Store",
-    "clearDataTitle": "I-clear ang Lahat ng Data?"
-  },
+    "clearDataTitle": "I-clear ang Lahat ng Data?",
+    "chooseYourLanguage": "Piliin ang iyong wika",
+    "selectLanguageSubtitle": "Piliin ang wikang nais mong gamitin"},
   "he": {
     "appTitle": "Electrician Simulator App",
     "home": "בַּיִת",
@@ -3011,8 +3039,9 @@ class AppLocalizations {
     "supportEmailTitle": "צור קשר עם התמיכה",
     "supportEmailBody": "שלח לנו דוא\"ל לכתובת: koreappstek@gmail.com. בדרך כלל אנו עונים תוך 48 שעות.",
     "couldNotOpenStore": "לא ניתן היה לפתוח את חנות Play",
-    "appVersion": "גרסה 2.0.0 בטא סגורה"
-  },
+    "appVersion": "גרסה 2.0.0 בטא סגורה",
+    "chooseYourLanguage": "בחר את השפה שלך",
+    "selectLanguageSubtitle": "בחר את השפה שברצונך להשתמש בה"},
   "az": {
     "theoryAcademy": "Nəzəriyyə Akademiyası",
     "quizProgress": "Viktorina İrəli",
@@ -3112,8 +3141,9 @@ class AppLocalizations {
     "warnings": "Xəbərdarlıqlar",
     "appearance": "Görünüş",
     "clear": "Təmiz",
-    "clearDataTitle": "Bütün məlumatlar silinsin?"
-  },
+    "clearDataTitle": "Bütün məlumatlar silinsin?",
+    "chooseYourLanguage": "Dilinizi seçin",
+    "selectLanguageSubtitle": "İstifadə etmək istədiyiniz dili seçin"},
   "uz": {
     "quizProgress": "Viktorinaning borishi",
     "popularTools": "Ommabop asboblar",
@@ -3213,8 +3243,9 @@ class AppLocalizations {
     "clearDataWarning": "Bu barcha saqlangan hisoblar, viktorina natijalari va xatcho‘plarni o‘chirib tashlaydi. Bu amalni ortga qaytarib bo‘lmaydi.",
     "supportEmailBody": "Bizga elektron pochta xabarini yuboring: koreappstek@gmail.com. Biz odatda 48 soat ichida javob beramiz.",
     "allDataCleared": "Barcha maʼlumotlar tozalandi",
-    "couldNotOpenStore": "Play Store ochilmadi"
-  },
+    "couldNotOpenStore": "Play Store ochilmadi",
+    "chooseYourLanguage": "Tilingizni tanlang",
+    "selectLanguageSubtitle": "Foydalanmoqchi bo'lgan tilni tanlang"},
   "my": {
     "quizProgress": "ပဟေဠိတိုးတက်မှု",
     "welcomeBack": "ကြိုဆိုပါတယ်,",
@@ -3314,8 +3345,9 @@ class AppLocalizations {
     "supportEmailTitle": "ပံ့ပိုးကူညီမှုထံ ဆက်သွယ်ပါ။",
     "betaFeedbackDesc": "အမှားအယွင်းများ၊ မှားယွင်းသောဖော်မြူလာများ၊ အကြောင်းအရာပြင်ဆင်ချက်များ သို့မဟုတ် အကြံပြုချက်များကို အစီရင်ခံပါ။",
     "referenceNote": "ကိုးကားမှတ်စု",
-    "jobManager": "အလုပ်မန်နေဂျာ"
-  },
+    "jobManager": "အလုပ်မန်နေဂျာ",
+    "chooseYourLanguage": "သင့်ဘာသာစကားကို ရွေးချယ်ပါ",
+    "selectLanguageSubtitle": "သင်အသုံးပြုလိုသော ဘာသာစကားကို ရွေးချယ်ပါ"},
   "km": {
     "appTitle": "Electrician Simulator App",
     "wiringDiagrams": "ដ្យាក្រាមខ្សែភ្លើង",
@@ -3415,8 +3447,9 @@ class AppLocalizations {
     "startRandomQuiz": "ចាប់ផ្តើមសំណួរចៃដន្យ (10 សំណួរ)",
     "contactSupport": "ទាក់ទងផ្នែកជំនួយ",
     "warnings": "ការព្រមាន",
-    "madeForElectricians": "ផលិតដោយ ❤️ សម្រាប់ជាងអគ្គិសនី"
-  },
+    "madeForElectricians": "ផលិតដោយ ❤️ សម្រាប់ជាងអគ្គិសនី",
+    "chooseYourLanguage": "ជ្រើសរើសភាសារបស់អ្នក",
+    "selectLanguageSubtitle": "ជ្រើសរើសភាសាដែលអ្នកចង់ប្រើ"},
   "si": {
     "electricianPro": "විදුලි කාර්මික Pro",
     "wiringDiagrams": "රැහැන්ගත රූප සටහන්",
@@ -3516,8 +3549,9 @@ class AppLocalizations {
     "clearDataTitle": "සියලු දත්ත හිස් කරන්නද?",
     "supportEmailTitle": "සහාය අමතන්න",
     "clearDataWarning": "මෙය සුරකින ලද සියලුම ගණනය කිරීම්, ප්‍රශ්න විචාරාත්මක ප්‍රතිඵල සහ පිටු සලකුණු මකා දමයි. මෙම ක්‍රියාව පසුගමනය කළ නොහැක.",
-    "jobManagerDesc": "රැකියා, සේවාදායක/අඩවි සටහන්, ද්‍රව්‍ය සටහන් සහ තත්ත්‍ව ලුහුබැඳීම සාදන්න"
-  },
+    "jobManagerDesc": "රැකියා, සේවාදායක/අඩවි සටහන්, ද්‍රව්‍ය සටහන් සහ තත්ත්‍ව ලුහුබැඳීම සාදන්න",
+    "chooseYourLanguage": "ඔබේ භාෂාව තෝරන්න",
+    "selectLanguageSubtitle": "ඔබට භාවිතා කිරීමට අවශ්‍ය භාෂාව තෝරන්න"},
   "am": {
     "wiringDiagrams": "የወልና ንድፎች",
     "home": "ቤት",
@@ -3617,8 +3651,9 @@ class AppLocalizations {
     "clearDataDesc": "የተቀመጡ ስሌቶችን እና ታሪክን ሰርዝ",
     "globalSearch": "ዓለም አቀፍ ፍለጋ",
     "allDataCleared": "ሁሉም ውሂብ ጸድቷል።",
-    "clearDataTitle": "ሁሉንም ውሂብ ያጽዱ?"
-  },
+    "clearDataTitle": "ሁሉንም ውሂብ ያጽዱ?",
+    "chooseYourLanguage": "ቋንቋዎን ይምረጡ",
+    "selectLanguageSubtitle": "መጠቀም የሚፈልጉትን ቋንቋ ይምረጡ"},
   "ur": {
     "questions": "سوالات",
     "appearance": "ظاہری شکل",
@@ -3718,8 +3753,9 @@ class AppLocalizations {
     "stepByStepGuide": "مرحلہ وار گائیڈ",
     "globalSearchDesc": "مضامین، ٹولز، خاکے، کوئز، معیارات اور ویڈیوز تلاش کریں۔",
     "backToQuiz": "کوئز پر واپس جائیں۔",
-    "commonMistakes": "عام غلطیاں"
-  },
+    "commonMistakes": "عام غلطیاں",
+    "chooseYourLanguage": "اپنی زبان منتخب کریں",
+    "selectLanguageSubtitle": "وہ زبان منتخب کریں جو آپ استعمال کرنا چاہتے ہیں"},
   "hi": {
     "safetyWarnings": "सुरक्षा चेतावनियाँ",
     "professionalNotes": "व्यावसायिक नोट्स",
@@ -3819,8 +3855,9 @@ class AppLocalizations {
     "madeForElectricians": "इलेक्ट्रीशियनों के लिए ❤️ के साथ बनाया गया",
     "clearData": "स्पष्ट डेटा",
     "toggleTheme": "डार्क/लाइट थीम टॉगल करें",
-    "educationalDisclaimer": "केवल शैक्षिक संदर्भ। नवीनतम आधिकारिक आवश्यकताओं और योग्य पेशेवरों के साथ सत्यापित करें।"
-  },
+    "educationalDisclaimer": "केवल शैक्षिक संदर्भ। नवीनतम आधिकारिक आवश्यकताओं और योग्य पेशेवरों के साथ सत्यापित करें।",
+    "chooseYourLanguage": "अपनी भाषा चुनें",
+    "selectLanguageSubtitle": "वह भाषा चुनें जिसका आप उपयोग करना चाहते हैं"},
   "ar": {
     "welcomeBack": "مرحبًا بعودتك،",
     "quiz": "لغز",
@@ -3920,8 +3957,9 @@ class AppLocalizations {
     "referenceNote": "ملاحظة مرجعية",
     "educationalDisclaimer": "مرجع تعليمي فقط. تحقق مع أحدث المتطلبات الرسمية والمهنيين المؤهلين.",
     "startRandomQuiz": "ابدأ اختبارًا عشوائيًا (10 أسئلة)",
-    "offlineContent": "المحتوى دون اتصال"
-  },
+    "offlineContent": "المحتوى دون اتصال",
+    "chooseYourLanguage": "اختر لغتك",
+    "selectLanguageSubtitle": "حدد اللغة التي تريد استخدامها"},
   "es": {
     "wiring": "Alambrado",
     "continueReading": "Continuar leyendo",
@@ -4021,8 +4059,9 @@ class AppLocalizations {
     "jobManagerDesc": "Cree trabajos, notas de cliente/sitio, notas de materiales y seguimiento de estado",
     "toggleTheme": "Alternar tema oscuro/claro",
     "warnings": "Advertencias",
-    "educationalDisclaimer": "Referencia educativa únicamente. Verifique con los últimos requisitos oficiales y profesionales calificados."
-  },
+    "educationalDisclaimer": "Referencia educativa únicamente. Verifique con los últimos requisitos oficiales y profesionales calificados.",
+    "chooseYourLanguage": "Elige tu idioma",
+    "selectLanguageSubtitle": "Selecciona el idioma que deseas usar"},
   "pt": {
     "theory": "Teoria",
     "tools": "Ferramentas",
@@ -4122,8 +4161,9 @@ class AppLocalizations {
     "clearDataTitle": "Limpar todos os dados?",
     "couldNotOpenStore": "Não foi possível abrir a Play Store",
     "supportEmailBody": "Envie-nos um email para: koreappstek@gmail.com. Geralmente respondemos dentro de 48 horas.",
-    "clearDataWarning": "Isso excluirá todos os cálculos, resultados de questionários e marcadores salvos. Esta ação não pode ser desfeita."
-  },
+    "clearDataWarning": "Isso excluirá todos os cálculos, resultados de questionários e marcadores salvos. Esta ação não pode ser desfeita.",
+    "chooseYourLanguage": "Escolha seu idioma",
+    "selectLanguageSubtitle": "Selecione o idioma que deseja usar"},
   "fr": {
     "home": "Maison",
     "appTitle": "Electrician Simulator App",
@@ -4223,8 +4263,9 @@ class AppLocalizations {
     "wiring": "Câblage",
     "stepByStepGuide": "Guide étape par étape",
     "calculators": "Calculatrices",
-    "educationalDisclaimer": "Référence pédagogique uniquement. Vérifiez auprès des dernières exigences officielles et des professionnels qualifiés."
-  },
+    "educationalDisclaimer": "Référence pédagogique uniquement. Vérifiez auprès des dernières exigences officielles et des professionnels qualifiés.",
+    "chooseYourLanguage": "Choisissez votre langue",
+    "selectLanguageSubtitle": "Sélectionnez la langue que vous souhaitez utiliser"},
   "de": {
     "home": "Heim",
     "tools": "Werkzeuge",
@@ -4324,8 +4365,9 @@ class AppLocalizations {
     "results": "Ergebnisse",
     "calculators": "Taschenrechner",
     "nextQuestion": "Nächste Frage",
-    "educationalDisclaimer": "Nur als pädagogische Referenz. Überprüfen Sie anhand der neuesten offiziellen Anforderungen und qualifizierter Fachkräfte."
-  },
+    "educationalDisclaimer": "Nur als pädagogische Referenz. Überprüfen Sie anhand der neuesten offiziellen Anforderungen und qualifizierter Fachkräfte.",
+    "chooseYourLanguage": "Wähle deine Sprache",
+    "selectLanguageSubtitle": "Wähle die Sprache, die du verwenden möchtest"},
   "ru": {
     "bookmarks": "Закладки",
     "home": "Дом",
@@ -4425,8 +4467,9 @@ class AppLocalizations {
     "calculate": "Рассчитать",
     "stepByStepGuide": "Пошаговое руководство",
     "educationalDisclaimer": "Только образовательная справка. Проверьте последние официальные требования и квалифицированных специалистов.",
-    "appVersion": "Версия 2.0.0 Закрытое бета-тестирование"
-  },
+    "appVersion": "Версия 2.0.0 Закрытое бета-тестирование",
+    "chooseYourLanguage": "Выберите язык",
+    "selectLanguageSubtitle": "Выберите язык, который хотите использовать"},
   "zh": {
     "theory": "理论",
     "popularTools": "流行工具",
@@ -4526,8 +4569,9 @@ class AppLocalizations {
     "supportEmailBody": "给我们发电子邮件：koreappstek@gmail.com。我们通常会在 48 小时内回复。",
     "nextQuestion": "下一个问题",
     "selectCategory": "选择类别",
-    "testingProcedure": "测试程序"
-  },
+    "testingProcedure": "测试程序",
+    "chooseYourLanguage": "选择你的语言",
+    "selectLanguageSubtitle": "选择你想使用的语言"},
   "tr": {
     "appTitle": "Electrician Simulator App",
     "welcomeBack": "Tekrar hoşgeldiniz,",
@@ -4627,8 +4671,9 @@ class AppLocalizations {
     "formula": "Formül",
     "privacyPolicy": "Gizlilik Politikası",
     "theory": "Teori",
-    "educationalDisclaimer": "Yalnızca eğitimsel referans. En son resmi gereksinimler ve kalifiye profesyonellerle doğrulayın."
-  },
+    "educationalDisclaimer": "Yalnızca eğitimsel referans. En son resmi gereksinimler ve kalifiye profesyonellerle doğrulayın.",
+    "chooseYourLanguage": "Dilinizi seçin",
+    "selectLanguageSubtitle": "Kullanmak istediğiniz dili seçin"},
   "id": {
     "popularTools": "Alat Populer",
     "wiringDiagrams": "Diagram Pengkabelan",
@@ -4728,8 +4773,9 @@ class AppLocalizations {
     "couldNotOpenStore": "Tidak dapat membuka Play Store",
     "stepByStepGuide": "Panduan Langkah demi Langkah",
     "calculators": "Kalkulator",
-    "educationalDisclaimer": "Referensi pendidikan saja. Verifikasi dengan persyaratan resmi terbaru dan profesional yang berkualifikasi."
-  },
+    "educationalDisclaimer": "Referensi pendidikan saja. Verifikasi dengan persyaratan resmi terbaru dan profesional yang berkualifikasi.",
+    "chooseYourLanguage": "Pilih bahasa Anda",
+    "selectLanguageSubtitle": "Pilih bahasa yang ingin Anda gunakan"},
   "bn": {
     "tools": "টুলস",
     "calculators": "ক্যালকুলেটর",
@@ -4829,8 +4875,9 @@ class AppLocalizations {
     "keyPoints": "মূল পয়েন্ট",
     "referenceNote": "রেফারেন্স নোট",
     "seeResults": "ফলাফল দেখুন",
-    "educationalDisclaimer": "শুধুমাত্র শিক্ষাগত রেফারেন্স। সর্বশেষ অফিসিয়াল প্রয়োজনীয়তা এবং যোগ্য পেশাদারদের সাথে যাচাই করুন।"
-  },
+    "educationalDisclaimer": "শুধুমাত্র শিক্ষাগত রেফারেন্স। সর্বশেষ অফিসিয়াল প্রয়োজনীয়তা এবং যোগ্য পেশাদারদের সাথে যাচাই করুন।",
+    "chooseYourLanguage": "আপনার ভাষা চয়ন করুন",
+    "selectLanguageSubtitle": "আপনি যে ভাষা ব্যবহার করতে চান তা নির্বাচন করুন"},
   "fa": {
     "theory": "نظریه",
     "settings": "تنظیمات",
@@ -4930,8 +4977,9 @@ class AppLocalizations {
     "commonMistakes": "اشتباهات رایج",
     "appVersion": "نسخه 2.0.0 بسته بتا",
     "offlineContentDesc": "همه محتوا به صورت آفلاین در دسترس است",
-    "educationalDisclaimer": "فقط مرجع آموزشی با آخرین الزامات رسمی و متخصصان واجد شرایط تأیید کنید."
-  },
+    "educationalDisclaimer": "فقط مرجع آموزشی با آخرین الزامات رسمی و متخصصان واجد شرایط تأیید کنید.",
+    "chooseYourLanguage": "زبان خود را انتخاب کنید",
+    "selectLanguageSubtitle": "زبانی را که می‌خواهید استفاده کنید انتخاب کنید"},
   "ms": {
     "welcomeBack": "selamat kembali,",
     "theoryAcademy": "Akademi Teori",
@@ -5031,8 +5079,9 @@ class AppLocalizations {
     "clearDataDesc": "Padamkan pengiraan & sejarah yang disimpan",
     "questions": "soalan",
     "allDataCleared": "Semua data dikosongkan",
-    "educationalDisclaimer": "Rujukan pendidikan sahaja. Sahkan dengan keperluan rasmi terkini dan profesional yang berkelayakan."
-  },
+    "educationalDisclaimer": "Rujukan pendidikan sahaja. Sahkan dengan keperluan rasmi terkini dan profesional yang berkelayakan.",
+    "chooseYourLanguage": "Pilih bahasa anda",
+    "selectLanguageSubtitle": "Pilih bahasa yang ingin anda gunakan"},
   "en": {
     "appTitle": "Electrician Simulator App",
     "home": "Home",
@@ -5132,8 +5181,9 @@ class AppLocalizations {
     "supportEmailTitle": "Contact Support",
     "supportEmailBody": "Email Us At: koreappstek@gmail.com. We Usually Reply Within 48 Hours.",
     "couldNotOpenStore": "Could Not Open the Play Store",
-    "appVersion": "Version 2.0.0 Closed Beta"
-  }
+    "appVersion": "Version 2.0.0 Closed Beta",
+    "chooseYourLanguage": "Choose your language",
+    "selectLanguageSubtitle": "Select the language you want to use"}
 };
 
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'onboarding_screen.dart';
+import 'startup/startup_language_screen.dart';
 import 'dart:async';
 import '../../core/theme/app_theme.dart';
-import 'main_scaffold.dart';
 import '../../core/localization/app_localizations.dart';
 import '../../core/localization/ui_text.dart';
 
@@ -68,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen>
       );
     } else {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const MainScaffold()),
+        MaterialPageRoute(builder: (_) => const StartupLanguageScreen()),
       );
     }
   }
