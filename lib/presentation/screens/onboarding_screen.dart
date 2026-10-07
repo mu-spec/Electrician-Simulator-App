@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:electrician_simulator_app/core/localization/ui_text.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:electrician_simulator_app/presentation/screens/startup/startup_language_screen.dart';
+import 'package:electrician_simulator_app/presentation/screens/main_scaffold.dart';
 import 'package:electrician_simulator_app/core/theme/app_theme.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -32,11 +33,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Future<void> _finishOnboarding() async {
     final box = await Hive.openBox('settings');
     await box.put('hasSeenOnboarding', true);
+    final hasSelectedStartupLanguage =
+        box.get('hasSelectedStartupLanguage', defaultValue: false) == true;
 
     if (!mounted) return;
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => const StartupLanguageScreen()),
-    );
+    if (!hasSelectedStartupLanguage) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => const StartupLanguageScreen()),
+      );
+    } else {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => const MainScaffold()),
+      );
+    }
   }
 
   @override

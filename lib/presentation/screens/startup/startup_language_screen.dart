@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import '../../../core/localization/app_localizations.dart';
 import '../../../core/localization/locale_cubit.dart';
 import '../../../core/theme/app_theme.dart';
 import '../main_scaffold.dart';
 
-/// Startup language selection shown on every app launch before Home.
+/// One-time startup language selection — final first-time setup step before Home.
 ///
 /// Uses the SAME source of truth as Settings → Language:
 /// - [AppLocalizations.supportedLanguages] for the list
 /// - [LocaleCubit] (Hive key `settings/localeCode`) for persistence
 ///
-/// Flow: Splash → [Onboarding if needed] → [StartupLanguageScreen] → [MainScaffold]
+/// Additional Hive flag `settings/hasSelectedStartupLanguage` (bool, default false)
+/// ensures this screen appears ONLY ONCE per installation:
+///   Fresh install: Splash → Onboarding (if needed) → StartupLanguageScreen → Done → Home
+///   Later launches: Splash → Home (language already persisted via LocaleCubit)
 /// Preselected language is the currently persisted locale. User may keep it
-/// and press Done, or pick another and press Done. Done persists, updates
-/// the app Locale, and replaces this route so Back from Home never returns here.
+/// and press Done, or pick another and press Done. Done persists the locale
+/// AND the completion flag, then replaces this route so Back from Home never returns here.
 class StartupLanguageScreen extends StatefulWidget {
   const StartupLanguageScreen({super.key});
 
@@ -30,12 +34,19 @@ class _StartupLanguageScreenState extends State<StartupLanguageScreen> {
     if (_saving) return;
     setState(() => _saving = true);
     final codeToSave = _pendingCode ?? currentCode;
-    // Persist and apply via the shared LocaleCubit
-    await context.read<LocaleCubit>().setLanguageCode(codeToSave);
-    if (!context.mounted) return;
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => const MainScaffold()),
-    );
+    try {
+      // 1. Persist and apply via the shared LocaleCubit (Hive settings/localeCode)
+      await context.read<LocaleCubit>().setLanguageCode(codeToSave);
+      // 2. Persist one-time completion flag in the SAME Hive box 'settings'
+      final box = await Hive.openBox('settings');
+      await box.put('hasSelectedStartupLanguage', true);
+      if (!context.mounted) return;
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => const MainScaffold()),
+      );
+    } catch (_) {
+      if (mounted) setState(() => _saving = false);
+    }
   }
 
   @override

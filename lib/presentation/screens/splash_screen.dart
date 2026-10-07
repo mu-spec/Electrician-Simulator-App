@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'onboarding_screen.dart';
 import 'startup/startup_language_screen.dart';
+import 'main_scaffold.dart';
 import 'dart:async';
 import '../../core/theme/app_theme.dart';
 import '../../core/localization/app_localizations.dart';
@@ -58,7 +59,10 @@ class _SplashScreenState extends State<SplashScreen>
 
   Future<void> _goToHome() async {
     final box = await Hive.openBox('settings');
-    final hasSeenOnboarding = box.get('hasSeenOnboarding', defaultValue: false);
+    final hasSeenOnboarding =
+        box.get('hasSeenOnboarding', defaultValue: false) == true;
+    final hasSelectedStartupLanguage =
+        box.get('hasSelectedStartupLanguage', defaultValue: false) == true;
 
     if (!mounted) return;
 
@@ -66,9 +70,13 @@ class _SplashScreenState extends State<SplashScreen>
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const OnboardingScreen()),
       );
-    } else {
+    } else if (!hasSelectedStartupLanguage) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const StartupLanguageScreen()),
+      );
+    } else {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => const MainScaffold()),
       );
     }
   }
