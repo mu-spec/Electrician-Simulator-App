@@ -162,6 +162,80 @@ workflows:
           success: true
           failure: true
 
+  ios-adhoc:
+    name: iOS Ad Hoc Test Build
+    instance_type: mac_mini_m1
+    max_build_duration: 60
+
+    # App Store Connect API key integration, connected in Codemagic as
+    # "Electrician App Apple Key". Used to load the Ad Hoc signing assets
+    # that are already stored in Codemagic.
+    integrations:
+      app_store_connect: Electrician App Apple Key
+
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      # All signing assets live in Codemagic, never in this file: the Apple
+      # Distribution certificate (reference name electrician_distribution) and
+      # the Ad Hoc provisioning profile (electrician_adhoc_profile).
+      # Codemagic installs the matching pair from this declaration.
+      ios_signing:
+        distribution_type: ad_hoc
+        bundle_identifier: com.koreappstek.electriciansimulatorapp
+
+    cache:
+      cache_paths:
+        - $FLUTTER_ROOT/.pub-cache
+        - $HOME/.cocoapods
+
+    scripts:
+      - name: Flutter version
+        script: |
+          flutter --version
+
+      - name: Clean project
+        script: |
+          flutter clean
+          rm -rf build
+
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+
+      - name: Install CocoaPods dependencies (ios/Podfile)
+        script: |
+          cd ios && pod install
+
+      # Codemagic installs the certificate and provisioning profile declared in
+      # ios_signing above; this step applies them to the Xcode project. It runs
+      # before the IPA build so the archive is signed for Ad Hoc testing.
+      - name: Set up iOS code signing
+        script: xcode-project use-profiles
+
+      # Release archive. Signing artefacts from the step above are applied to
+      # the Xcode project, so this build is signed for Ad Hoc distribution.
+      # No App Store Connect / TestFlight automatic publishing is configured.
+      - name: Build release IPA
+        script: |
+          flutter build ipa --release \
+            --obfuscate \
+            --split-debug-info=./symbols-ios-adhoc \
+            --export-options-plist=/Users/builder/export_options.plist
+          ls -lh build/ios/ipa/
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true
+
   ios-release:
     name: iOS Release Build (IPA)
     instance_type: mac_mini_m1
